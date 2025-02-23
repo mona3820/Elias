@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلياس الروسي - صانع المحتوى</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: #121212;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .card {
+            background: #1e1e1e;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+            transform: scale(0.9);
+            animation: popUp 1s ease-in-out forwards;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 250px;
+            background: url('https://i.ibb.co/5hxMc2Rw/1740312840586.jpg') no-repeat center center/cover;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffcc00;
+            color: #222;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 15px;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #ffaa00;
+            transform: scale(1.1);
+        }
+
+        .highlight {
+            font-size: 20px;
+            color: #ffcc00;
+            margin-top: 15px;
+            display: block;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #bbb;
+            margin-top: 15px;
+            padding-bottom: 10px;
+        }
+
+        @keyframes popUp {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="image-container"></div>
+        <div class="content">
+            <h1>إلياس الروسي</h1>
+            <p>صانع محتوى روسي بيقدم فيديوهات كوميدية عن الثقافة المصرية والحياة في مصر بطريقة ممتعة وجديدة.</p>
+            <p>لو عايز تشوف تجربته ومعرفته بالمصريين، تابع فيديوهاته:</p>
+            <a href="https://www.facebook.com/profile.php?id=61568739116529" target="_blank" class="btn">شاهد الفيديوهات</a>
+
+            <span class="highlight">🎓 قريبًا: كورس لتعليم اللغة الروسية!</span>
+            <p>عايز تتعلم روسي بأسلوب ممتع وسهل؟ تابعنا للمزيد قريبًا.</p>
+
+            <div class="footer">© جميع الحقوق محفوظة</div>
+        </div>
+    </div>
+
+</body>
+</html>
