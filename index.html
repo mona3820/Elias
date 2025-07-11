@@ -1,116 +1,162 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إلياس الروسي - صانع المحتوى</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Tajawal', sans-serif;
-            background: #121212;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        .card {
-            background: #1e1e1e;
-            width: 90%;
-            max-width: 600px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
-            transform: scale(0.9);
-            animation: popUp 1s ease-in-out forwards;
-        }
-
-        .image-container {
-            width: 100%;
-            height: 250px;
-            background: url('https://i.ibb.co/5hxMc2Rw/1740312840586.jpg') no-repeat center center/cover;
-        }
-
-        .content {
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 26px;
-            color: #ffcc00;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #ddd;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #ffcc00;
-            color: #222;
-            padding: 12px 25px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 8px;
-            margin-top: 15px;
-            text-decoration: none;
-            transition: 0.3s ease-in-out;
-        }
-
-        .btn:hover {
-            background: #ffaa00;
-            transform: scale(1.1);
-        }
-
-        .highlight {
-            font-size: 20px;
-            color: #ffcc00;
-            margin-top: 15px;
-            display: block;
-        }
-
-        .footer {
-            font-size: 14px;
-            color: #bbb;
-            margin-top: 15px;
-            padding-bottom: 10px;
-        }
-
-        @keyframes popUp {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-    </style>
+    <title>الرئيسية - إسناد</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <div class="card">
-        <div class="image-container"></div>
-        <div class="content">
-            <h1>إلياس الروسي</h1>
-            <p>صانع محتوى روسي بيقدم فيديوهات كوميدية عن الثقافة المصرية والحياة في مصر بطريقة ممتعة وجديدة.</p>
-            <p>لو عايز تشوف تجربته ومعرفته بالمصريين، تابع فيديوهاته:</p>
-            <a href="https://www.facebook.com/profile.php?id=61568739116529" target="_blank" class="btn">شاهد الفيديوهات</a>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1>إسناد</h1></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">المنتجات <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="products.html?category=all">كل المنتجات</a>
+                            <a href="products.html?category=air-ducts">مجاري الهواء</a>
+                            <a href="products.html?category=ahu-units">وحدات مناولة الهواء (AHU)</a>
+                            <a href="products.html?category=ventilation-systems">أنظمة التهوية</a>
+                            </div>
+                    </li>
+                    <li><a href="projects.html">مشاريعنا</a></li>
+                    <li><a href="index.html#about-us">عن الشركة</a></li>
+                    <li><a href="index.html#contact-footer">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            </div>
+    </header>
 
-            <span class="highlight">🎓 قريبًا: كورس لتعليم اللغة الروسية!</span>
-            <p>عايز تتعلم روسي بأسلوب ممتع وسهل؟ تابعنا للمزيد قريبًا.</p>
-
-            <div class="footer">© جميع الحقوق محفوظة</div>
+    <section class="hero-section">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('https://via.placeholder.com/1920x800/1E2B38/E67E22?text=Slide+1+-+Welcome+to+Esnad');">
+                <div class="overlay"></div>
+                <div class="hero-content">
+                    <h2>نقدم حلولاً متكاملة لأنظمة التكييف والتهوية</h2>
+                    <p>خبرة واسعة وجودة لا مثيل لها في تنفيذ المشاريع الصناعية والتجارية.</p>
+                    <div class="hero-cta">
+                        <a href="#about-us" class="btn primary-btn large-btn">اكتشف المزيد عنا</a>
+                        <a href="products.html?category=all" class="btn secondary-btn large-btn">تصفح منتجاتنا</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://via.placeholder.com/1920x800/E67E22/1E2B38?text=Slide+2+-+Our+Products');">
+                <div class="overlay"></div>
+                <div class="hero-content">
+                    <h2>منتجات عالية الجودة لتلبية جميع احتياجاتك</h2>
+                    <p>مجاري هواء، وحدات تكييف، أنظمة تهوية متطورة والمزيد.</p>
+                    <div class="hero-cta">
+                        <a href="products.html?category=all" class="btn primary-btn large-btn">استكشف منتجاتنا</a>
+                        <a href="projects.html" class="btn secondary-btn large-btn">شاهد مشاريعنا</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://via.placeholder.com/1920x800/2C3E50/E67E22?text=Slide+3+-+Success+Stories');">
+                <div class="overlay"></div>
+                <div class="hero-content">
+                    <h2>نجاحات تُبنى على الثقة والجودة</h2>
+                    <p>شراكات قوية ومشاريع رائدة في مختلف القطاعات.</p>
+                    <div class="hero-cta">
+                        <a href="projects.html" class="btn primary-btn large-btn">تعرف على مشاريعنا</a>
+                        <a href="#contact-footer" class="btn secondary-btn large-btn">تواصل معنا</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="slider-nav">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+    </section>
 
+    <section id="about-us" class="about-section">
+        <div class="container">
+            <h3>من نحن؟</h3>
+            <p class="section-description">في إسناد، نؤمن بأن الجودة والابتكار هما حجر الزاوية في بناء الأنظمة المتكاملة.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h4>حلول متكاملة لبيئة عمل مثالية</h4>
+                    <p>إسناد هي شركة رائدة في مجال تصميم وتصنيع وتوريد وتركيب أنظمة التكييف والتهوية المركزية. نلتزم بتقديم حلول هندسية مبتكرة تلبي أعلى معايير الجودة والكفاءة، مع التركيز على تلبية احتياجات عملائنا المتنوعة في القطاعات الصناعية والتجارية.</p>
+                    <p>فريقنا من المهندسين والفنيين ذوي الخبرة يعملون بجد لضمان تنفيذ المشاريع بأعلى مستويات الاحترافية والدقة، من التصميم الأولي حتى التسليم النهائي والصيانة المستمرة.</p>
+                    <a href="#" class="btn primary-btn">اعرف المزيد عن رؤيتنا</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/600x400/1E2B38/E67E22?text=About+Us+Image" alt="صورة عن الشركة">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="statistics-section">
+        <div class="container">
+            <h3>أرقامنا تتحدث عن نفسها</h3>
+            <p class="section-description">نفخر بما حققناه من إنجازات بفضل ثقة عملائنا الكرام.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="icon"><i class="fas fa-boxes"></i></div>
+                    <span class="number" data-target="1500">0</span>
+                    <p>منتج متنوع</p>
+                </div>
+                <div class="stat-item">
+                    <div class="icon"><i class="fas fa-project-diagram"></i></div>
+                    <span class="number" data-target="300">0</span>
+                    <p>مشروع مكتمل</p>
+                </div>
+                <div class="stat-item">
+                    <div class="icon"><i class="fas fa-handshake"></i></div>
+                    <span class="number" data-target="98">0</span>
+                    <p>نسبة رضا العملاء</p>
+                </div>
+                <div class="stat-item">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <span class="number" data-target="120">0</span>
+                    <p>عميل سعيد</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact-footer" class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-col contact-info">
+                <h4>تواصل معنا</h4>
+                <p><i class="fas fa-map-marker-alt"></i> [عنوان شركتك بالكامل هنا - مثال: الرياض، المملكة العربية السعودية]</p>
+                <p><i class="fas fa-phone-alt"></i> [رقم الهاتف هنا - مثال: +966 50 123 4567]</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
+            </div>
+            <div class="footer-col sitemap">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="projects.html">مشاريعنا</a></li>
+                    <li><a href="index.html#about-us">عن الشركة</a></li>
+                </ul>
+            </div>
+            <div class="footer-col google-map">
+                <h4>موقعنا على الخريطة</h4>
+                <iframe src="http://googleusercontent.com/maps.google.com/3" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 إسناد. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/YOUR_PHONE_NUMBER" class="whatsapp-float" target="_blank" aria-label="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
 </body>
 </html>
+

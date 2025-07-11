@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتجاتنا - إسناد</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1>إسناد</h1></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">المنتجات <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="products.html?category=all">كل المنتجات</a>
+                            <a href="products.html?category=air-ducts">مجاري الهواء</a>
+                            <a href="products.html?category=ahu-units">وحدات مناولة الهواء (AHU)</a>
+                            <a href="products.html?category=ventilation-systems">أنظمة التهوية</a>
+                            </div>
+                    </li>
+                    <li><a href="projects.html">مشاريعنا</a></li>
+                    <li><a href="index.html#about-us">عن الشركة</a></li>
+                    <li><a href="index.html#contact-footer">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            </div>
+    </header>
+
+    <section class="page-title-section">
+        <div class="container">
+            <h2 id="current-category-title">منتجاتنا</h2>
+            <p id="current-category-description">استكشف مجموعتنا المتنوعة من المنتجات عالية الجودة.</p>
+        </div>
+    </section>
+
+    <section class="products-grid-section">
+        <div class="container">
+            <div class="category-filter-tabs">
+                <button class="filter-tab active" data-category="all">كل المنتجات</button>
+                <button class="filter-tab" data-category="air-ducts">مجاري الهواء</button>
+                <button class="filter-tab" data-category="ahu-units">وحدات مناولة الهواء (AHU)</button>
+                <button class="filter-tab" data-category="ventilation-systems">أنظمة التهوية</button>
+                </div>
+
+            <div class="products-grid" id="products-container">
+                <div class="product-card" data-category="air-ducts">
+                    <img src="https://via.placeholder.com/400x300/1E2B38/E67E22?text=Ducting+Square" alt="مجاري هواء مربعة">
+                    <div class="product-info">
+                        <h4>مجاري هواء مربعة (Square Ducts)</h4>
+                        <p>تصميم متين وعالي الكفاءة، مثالي للتطبيقات التجارية والصناعية التي تتطلب تدفق هواء كبير.</p>
+                        <a href="YOUR_DOWNLOAD_LINK_FOR_SQUARE_DUCTS.pdf" class="btn download-btn-small" download><i class="fas fa-download"></i> تحميل التفاصيل</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="air-ducts">
+                    <img src="https://via.placeholder.com/400x300/E67E22/1E2B38?text=Ducting+Round" alt="مجاري هواء دائرية">
+                    <div class="product-info">
+                        <h4>مجاري هواء دائرية (Round Ducts)</h4>
+                        <p>تتميز بمرونة عالية وسهولة في التركيب، وتوفر تدفق هواء سلس مع أقل فقدان للضغط.</p>
+                        <a href="YOUR_DOWNLOAD_LINK_FOR_ROUND_DUCTS.pdf" class="btn download-btn-small" download><i class="fas fa-download"></i> تحميل التفاصيل</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="ahu-units">
+                    <img src="https://via.placeholder.com/400x300/2C3E50/E67E22?text=Standard+AHU" alt="وحدة مناولة هواء قياسية">
+                    <div class="product-info">
+                        <h4>وحدات مناولة الهواء (AHU) قياسية</h4>
+                        <p>وحدات عالية الأداء لتكييف وتنقية الهواء في المساحات الكبيرة، بتصاميم متعددة.</p>
+                        <a href="YOUR_DOWNLOAD_LINK_FOR_STANDARD_AHU.pdf" class="btn download-btn-small" download><i class="fas fa-download"></i> تحميل التفاصيل</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="ventilation-systems">
+                    <img src="https://via.placeholder.com/400x300/F0F0F0/1E2B38?text=Industrial+Fans" alt="مراوح صناعية">
+                    <div class="product-info">
+                        <h4>مراوح تهوية صناعية</h4>
+                        <p>مراوح قوية ومتينة مصممة لتحقيق تدفق هواء فعال في البيئات الصناعية القاسية.</p>
+                        <a href="YOUR_DOWNLOAD_LINK_FOR_FANS.pdf" class="btn download-btn-small" download><i class="fas fa-download"></i> تحميل التفاصيل</a>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+    </section>
+
+    <footer id="contact-footer" class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-col contact-info">
+                <h4>تواصل معنا</h4>
+                <p><i class="fas fa-map-marker-alt"></i> [عنوان شركتك بالكامل هنا]</p>
+                <p><i class="fas fa-phone-alt"></i> [رقم الهاتف هنا]</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
+            </div>
+            <div class="footer-col sitemap">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="projects.html">مشاريعنا</a></li>
+                    <li><a href="index.html#about-us">عن الشركة</a></li>
+                </ul>
+            </div>
+            <div class="footer-col google-map">
+                <h4>موقعنا على الخريطة</h4>
+                <iframe src="http://googleusercontent.com/maps.google.com/4" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 إسناد. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/YOUR_PHONE_NUMBER" class="whatsapp-float" target="_blank" aria-label="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

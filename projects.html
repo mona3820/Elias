@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاريعنا - إسناد</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1>إسناد</h1></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">المنتجات <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="products.html?category=all">كل المنتجات</a>
+                            <a href="products.html?category=air-ducts">مجاري الهواء</a>
+                            <a href="products.html?category=ahu-units">وحدات مناولة الهواء (AHU)</a>
+                            <a href="products.html?category=ventilation-systems">أنظمة التهوية</a>
+                        </div>
+                    </li>
+                    <li><a href="projects.html">مشاريعنا</a></li>
+                    <li><a href="index.html#about-us">عن الشركة</a></li>
+                    <li><a href="index.html#contact-footer">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-title-section">
+        <div class="container">
+            <h2 id="current-project-category-title">مشاريعنا المنجزة</h2>
+            <p id="current-project-category-description">نفتخر بتقديم حلول هندسية مبتكرة ومشاريع ناجحة عبر قطاعات مختلفة.</p>
+        </div>
+    </section>
+
+    <section class="projects-grid-section">
+        <div class="container">
+            <div class="category-filter-tabs">
+                <button class="filter-tab active" data-category="all">كل المشاريع</button>
+                <button class="filter-tab" data-category="industrial">مشاريع صناعية</button>
+                <button class="filter-tab" data-category="commercial">مشاريع تجارية</button>
+                <button class="filter-tab" data-category="healthcare">مشاريع صحية</button>
+                </div>
+
+            <div class="projects-grid" id="projects-container">
+                </div>
+        </div>
+    </section>
+
+    <footer id="contact-footer" class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-col contact-info">
+                <h4>تواصل معنا</h4>
+                <p><i class="fas fa-map-marker-alt"></i> [عنوان شركتك بالكامل هنا]</p>
+                <p><i class="fas fa-phone-alt"></i> [رقم الهاتف هنا]</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
+            </div>
+            <div class="footer-col sitemap">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="projects.html">مشاريعنا</a></li>
+                    <li><a href="index.html#about-us">عن الشركة</a></li>
+                </ul>
+            </div>
+            <div class="footer-col google-map">
+                <h4>موقعنا على الخريطة</h4>
+                <iframe src="http://googleusercontent.com/maps.google.com/7" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 إسناد. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/YOUR_PHONE_NUMBER" class="whatsapp-float" target="_blank" aria-label="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
