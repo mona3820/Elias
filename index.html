@@ -3,160 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ุงูุฑุฆูุณูุฉ - ุฅุณูุงุฏ</title>
+    <title data-lang-key="homeTitle">วแัฦํำํษ - ลำไวฯ | Home - ESNAD</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
 
     <header class="main-header">
         <div class="container">
-            <div class="logo">
-                <a href="index.html"><h1>ุฅุณูุงุฏ</h1></a>
+            <div class="logo animate__animated animate__fadeInDown">
+                <a href="index.html">
+                    <img src="path/to/your/logo.png" alt="ESNAD Company Logo" class="animate__animated animate__pulse animate__infinite">
+                </a>
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav animate__animated animate__fadeInDown animate__delay-0-5s">
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
                 <ul>
-                    <li><a href="index.html">ุงูุฑุฆูุณูุฉ</a></li>
+                    <li><a href="index.html" class="active" data-lang-key="navHome">วแัฦํำํษ | Home</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">ุงูู…ูุชุฌุงุช <i class="fas fa-chevron-down"></i></a>
+                        <a href="#" class="dropbtn" data-lang-key="navProducts">วแใไสฬวส | Products <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
-                            <a href="products.html?category=all">ูู ุงูู…ูุชุฌุงุช</a>
-                            <a href="products.html?category=air-ducts">ู…ุฌุงุฑู ุงูููุงุก</a>
-                            <a href="products.html?category=ahu-units">ูุญุฏุงุช ู…ูุงููุฉ ุงูููุงุก (AHU)</a>
-                            <a href="products.html?category=ventilation-systems">ุฃูุธู…ุฉ ุงูุชูููุฉ</a>
-                            </div>
+                            <a href="products.html?category=all" data-lang-key="navAllProducts">฿แ วแใไสฬวส | All Products</a>
+                            <a href="products.html?category=air-ducts" data-lang-key="navAirDucts">ใฬวัํ วแๅๆวม | Air Ducts</a>
+                            <a href="products.html?category=air-outlets" data-lang-key="navAirOutlets">ใฮวัฬ วแๅๆวม | Air Outlets</a>
+                            <a href="products.html?category=dampers" data-lang-key="navDampers">วแฯใศัวส | Dampers</a>
+                        </div>
                     </li>
-                    <li><a href="projects.html">ู…ุดุงุฑูุนูุง</a></li>
-                    <li><a href="index.html#about-us">ุนู ุงูุดุฑูุฉ</a></li>
-                    <li><a href="index.html#contact-footer">ุงุชุตู ุจูุง</a></li>
+                    <li><a href="projects.html" data-lang-key="navProjects">วแใิวัํฺ | Projects</a></li>
+                    <li><a href="services.html" data-lang-key="navServices">วแฮฯใวส | Services</a></li>
+                    <li><a href="about.html" data-lang-key="navAbout">ฺไ วแิั฿ษ | About Us</a></li>
+                    <li><a href="contact.html" data-lang-key="navContact">วสีแ ศไว | Contact Us</a></li>
                 </ul>
+                <div class="language-switcher">
+                    <button id="lang-ar" class="lang-btn active">AR</button>
+                    <button id="lang-en" class="lang-btn">EN</button>
+                </div>
             </nav>
-            </div>
+        </div>
     </header>
 
     <section class="hero-section">
-        <div class="hero-slider">
-            <div class="slide active" style="background-image: url('https://via.placeholder.com/1920x800/1E2B38/E67E22?text=Slide+1+-+Welcome+to+Esnad');">
-                <div class="overlay"></div>
-                <div class="hero-content">
-                    <h2>ููุฏู… ุญูููุงู ู…ุชูุงู…ูุฉ ูุฃูุธู…ุฉ ุงูุชูููู ูุงูุชูููุฉ</h2>
-                    <p>ุฎุจุฑุฉ ูุงุณุนุฉ ูุฌูุฏุฉ ูุง ู…ุซูู ููุง ูู ุชูููุฐ ุงูู…ุดุงุฑูุน ุงูุตูุงุนูุฉ ูุงูุชุฌุงุฑูุฉ.</p>
-                    <div class="hero-cta">
-                        <a href="#about-us" class="btn primary-btn large-btn">ุงูุชุดู ุงูู…ุฒูุฏ ุนูุง</a>
-                        <a href="products.html?category=all" class="btn secondary-btn large-btn">ุชุตูุญ ู…ูุชุฌุงุชูุง</a>
-                    </div>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('https://via.placeholder.com/1920x800/E67E22/1E2B38?text=Slide+2+-+Our+Products');">
-                <div class="overlay"></div>
-                <div class="hero-content">
-                    <h2>ู…ูุชุฌุงุช ุนุงููุฉ ุงูุฌูุฏุฉ ูุชูุจูุฉ ุฌู…ูุน ุงุญุชูุงุฌุงุชู</h2>
-                    <p>ู…ุฌุงุฑู ููุงุกุ ูุญุฏุงุช ุชููููุ ุฃูุธู…ุฉ ุชูููุฉ ู…ุชุทูุฑุฉ ูุงูู…ุฒูุฏ.</p>
-                    <div class="hero-cta">
-                        <a href="products.html?category=all" class="btn primary-btn large-btn">ุงุณุชูุดู ู…ูุชุฌุงุชูุง</a>
-                        <a href="projects.html" class="btn secondary-btn large-btn">ุดุงูุฏ ู…ุดุงุฑูุนูุง</a>
-                    </div>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('https://via.placeholder.com/1920x800/2C3E50/E67E22?text=Slide+3+-+Success+Stories');">
-                <div class="overlay"></div>
-                <div class="hero-content">
-                    <h2>ูุฌุงุญุงุช ุชูุจูู ุนูู ุงูุซูุฉ ูุงูุฌูุฏุฉ</h2>
-                    <p>ุดุฑุงูุงุช ูููุฉ ูู…ุดุงุฑูุน ุฑุงุฆุฏุฉ ูู ู…ุฎุชูู ุงููุทุงุนุงุช.</p>
-                    <div class="hero-cta">
-                        <a href="projects.html" class="btn primary-btn large-btn">ุชุนุฑู ุนูู ู…ุดุงุฑูุนูุง</a>
-                        <a href="#contact-footer" class="btn secondary-btn large-btn">ุชูุงุตู ู…ุนูุง</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slider-nav">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
-            <span class="dot" data-slide="2"></span>
-        </div>
-    </section>
-
-    <section id="about-us" class="about-section">
         <div class="container">
-            <h3>ู…ู ูุญูุ</h3>
-            <p class="section-description">ูู ุฅุณูุงุฏุ ูุคู…ู ุจุฃู ุงูุฌูุฏุฉ ูุงูุงุจุชูุงุฑ ูู…ุง ุญุฌุฑ ุงูุฒุงููุฉ ูู ุจูุงุก ุงูุฃูุธู…ุฉ ุงูู…ุชูุงู…ูุฉ.</p>
-            <div class="about-content">
-                <div class="about-text">
-                    <h4>ุญููู ู…ุชูุงู…ูุฉ ูุจูุฆุฉ ุนู…ู ู…ุซุงููุฉ</h4>
-                    <p>ุฅุณูุงุฏ ูู ุดุฑูุฉ ุฑุงุฆุฏุฉ ูู ู…ุฌุงู ุชุตู…ูู… ูุชุตููุน ูุชูุฑูุฏ ูุชุฑููุจ ุฃูุธู…ุฉ ุงูุชูููู ูุงูุชูููุฉ ุงูู…ุฑูุฒูุฉ. ููุชุฒู… ุจุชูุฏูู… ุญููู ููุฏุณูุฉ ู…ุจุชูุฑุฉ ุชูุจู ุฃุนูู ู…ุนุงููุฑ ุงูุฌูุฏุฉ ูุงูููุงุกุฉุ ู…ุน ุงูุชุฑููุฒ ุนูู ุชูุจูุฉ ุงุญุชูุงุฌุงุช ุนู…ูุงุฆูุง ุงูู…ุชููุนุฉ ูู ุงููุทุงุนุงุช ุงูุตูุงุนูุฉ ูุงูุชุฌุงุฑูุฉ.</p>
-                    <p>ูุฑูููุง ู…ู ุงูู…ููุฏุณูู ูุงูููููู ุฐูู ุงูุฎุจุฑุฉ ูุนู…ููู ุจุฌุฏ ูุถู…ุงู ุชูููุฐ ุงูู…ุดุงุฑูุน ุจุฃุนูู ู…ุณุชููุงุช ุงูุงุญุชุฑุงููุฉ ูุงูุฏูุฉุ ู…ู ุงูุชุตู…ูู… ุงูุฃููู ุญุชู ุงูุชุณููู… ุงูููุงุฆู ูุงูุตูุงูุฉ ุงูู…ุณุชู…ุฑุฉ.</p>
-                    <a href="#" class="btn primary-btn">ุงุนุฑู ุงูู…ุฒูุฏ ุนู ุฑุคูุชูุง</a>
-                </div>
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/600x400/1E2B38/E67E22?text=About+Us+Image" alt="ุตูุฑุฉ ุนู ุงูุดุฑูุฉ">
-                </div>
+            <div class="hero-content animate__animated animate__fadeInUp animate__delay-1s">
+                <h1 data-lang-key="heroTitle">อแๆแ ใศส฿ัษ Ýํ ใฬวแ วแส฿ํํÝ ๆวแสๅๆํษ | Innovative HVAC Solutions</h1>
+                <p data-lang-key="heroText">ไÞฯใ รอฯห วแสÞไํวส ๆวแอแๆแ วแๅไฯำํษ แสแศํษ วอสํวฬวส฿ใ. | We offer the latest technologies and engineering solutions to meet your needs.</p>
+                <a href="projects.html" class="button animate__animated animate__zoomIn animate__delay-2s" data-lang-key="heroButton">ว฿สิÝ ใิวัํฺไว | Discover Our Projects</a>
             </div>
         </div>
     </section>
 
-    <section class="statistics-section">
+    <section class="featured-products section-padding">
         <div class="container">
-            <h3>ุฃุฑูุงู…ูุง ุชุชุญุฏุซ ุนู ููุณูุง</h3>
-            <p class="section-description">ููุฎุฑ ุจู…ุง ุญูููุงู ู…ู ุฅูุฌุงุฒุงุช ุจูุถู ุซูุฉ ุนู…ูุงุฆูุง ุงููุฑุงู….</p>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="icon"><i class="fas fa-boxes"></i></div>
-                    <span class="number" data-target="1500">0</span>
-                    <p>ู…ูุชุฌ ู…ุชููุน</p>
+            <h2 class="section-title animate__animated animate__fadeIn" data-lang-key="featuredProductsTitle">รอฯห วแใไสฬวส | Latest Products</h2>
+            <div class="products-grid" id="featuredProductsGrid">
                 </div>
-                <div class="stat-item">
-                    <div class="icon"><i class="fas fa-project-diagram"></i></div>
-                    <span class="number" data-target="300">0</span>
-                    <p>ู…ุดุฑูุน ู…ูุชู…ู</p>
+            <div class="button-container animate__animated animate__fadeInUp">
+                <a href="products.html?category=all" class="button" data-lang-key="viewAllProductsButton">ฺัึ ฬใํฺ วแใไสฬวส | View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 animate__animated animate__fadeInLeft">
+                    <h2 data-lang-key="aboutUsTitle">ฺไ ิั฿สไว | About Our Company</h2>
+                    <p data-lang-key="aboutUsText">ไอไ ิั฿ษ ลำไวฯก ัๆวฯ Ýํ สีใํใ ๆสีไํฺ ๆสั฿ํศ รไูใษ วแส฿ํํÝ ๆวแสๅๆํษ ฺวแํษ วแฬๆฯษ. ไแสาใ ศสÞฯํใ อแๆแ ใศส฿ัษ ๆÝฺวแษ สแศํ วอสํวฬวส ฺใแวฦไว วแใสÛํัษก ใฺ วแสั฿ํา ฺแ์ วแ฿Ýวมษ วแสิÛํแํษ ๆวแวำสฯวใษ วแศํฦํษ. | We are ESNAD, leaders in designing, manufacturing, and installing high-quality HVAC systems. We are committed to providing innovative and effective solutions that meet our clients' evolving needs, focusing on operational efficiency and environmental sustainability.</p>
+                    <a href="about.html" class="button" data-lang-key="readMoreButton">วÞัร วแใาํฯ | Read More</a>
                 </div>
-                <div class="stat-item">
-                    <div class="icon"><i class="fas fa-handshake"></i></div>
-                    <span class="number" data-target="98">0</span>
-                    <p>ูุณุจุฉ ุฑุถุง ุงูุนู…ูุงุก</p>
-                </div>
-                <div class="stat-item">
-                    <div class="icon"><i class="fas fa-users"></i></div>
-                    <span class="number" data-target="120">0</span>
-                    <p>ุนู…ูู ุณุนูุฏ</p>
+                <div class="col-md-6 animate__animated animate__fadeInRight">
+                    <img src="https://via.placeholder.com/500x350/1E2B38/E67E22?text=About+ESNAD" alt="About ESNAD Company">
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact-footer" class="main-footer">
+    <section class="our-services section-padding">
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeIn" data-lang-key="ourServicesTitle">ฮฯใวสไว | Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item animate__animated animate__fadeInUp animate__delay-0-2s">
+                    <i class="fas fa-snowflake"></i>
+                    <h3 data-lang-key="service1Title">สีใํใ รไูใษ วแส฿ํํÝ | HVAC System Design</h3>
+                    <p data-lang-key="service1Text">ไÞฯใ ฮฯใวส สีใํใ ใส฿วใแษ แรไูใษ วแส฿ํํÝ วแใั฿าํ ๆวแใÞวำใ วแๅๆวฦํษก แึใวไ รÝึแ รฯวม ๆ฿Ýวมษ. | We offer integrated design services for central air conditioning and air handling units, ensuring optimal performance and efficiency.</p>
+                </div>
+                <div class="service-item animate__animated animate__fadeInUp animate__delay-0-4s">
+                    <i class="fas fa-wind"></i>
+                    <h3 data-lang-key="service2Title">สีไํฺ ใฬวัํ วแๅๆวม | Ductwork Manufacturing</h3>
+                    <p data-lang-key="service2Text">ใสฮีีๆไ Ýํ สีไํฺ ใฬวัํ วแๅๆวม ศรฺแ์ ใฺวํํั วแฬๆฯษ ใไ วแีแศ วแใฬแÝไ ๆวแำสวไแำ ำสํแ ๆวแรแๆใไํๆใ. | Specialists in manufacturing high-quality ductwork from galvanized steel, stainless steel, and aluminum.</p>
+                </div>
+                <div class="service-item animate__animated animate__fadeInUp animate__delay-0-6s">
+                    <i class="fas fa-tools"></i>
+                    <h3 data-lang-key="service3Title">สั฿ํศ ๆีํวไษ | Installation & Maintenance</h3>
+                    <p data-lang-key="service3Text">ฮฯใวส สั฿ํศ ๆีํวไษ วอสัวÝํษ แฬใํฺ รไูใษ วแสๅๆํษ ๆวแส฿ํํÝ แึใวไ วแสิÛํแ วแรใหแ. | Professional installation and maintenance services for all ventilation and air conditioning systems to ensure optimal operation.</p>
+                </div>
+            </div>
+            <div class="button-container animate__animated animate__fadeInUp">
+                <a href="services.html" class="button" data-lang-key="discoverServicesButton">ว฿สิÝ ฮฯใวสไว | Discover Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
         <div class="container footer-content">
-            <div class="footer-col contact-info">
-                <h4>ุชูุงุตู ู…ุนูุง</h4>
-                <p><i class="fas fa-map-marker-alt"></i> [ุนููุงู ุดุฑูุชู ุจุงููุงู…ู ููุง - ู…ุซุงู: ุงูุฑูุงุถุ ุงูู…ู…ููุฉ ุงูุนุฑุจูุฉ ุงูุณุนูุฏูุฉ]</p>
-                <p><i class="fas fa-phone-alt"></i> [ุฑูู… ุงููุงุชู ููุง - ู…ุซุงู: +966 50 123 4567]</p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
+            <div class="footer-col contact-info animate__animated animate__fadeInUp">
+                <h4 data-lang-key="contactUsFooter">สๆวีแ ใฺไว | Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> <span data-lang-key="footerAddress">ศวำุๆำ วแÞไวุั วแฮํัํษก วแÞแํๆศํษก ใีั | Basos Al-Qanater Al-Khariia, Qalyubia, Egypt</span></p>
+                <p><i class="fas fa-phone-alt"></i> 01157444190 - 01009436723</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@esnad-eg.com">info@esnad-eg.com</a></p>
             </div>
-            <div class="footer-col sitemap">
-                <h4>ุฑูุงุจุท ุณุฑูุนุฉ</h4>
+            <div class="footer-col sitemap animate__animated animate__fadeInUp animate__delay-0-2s">
+                <h4 data-lang-key="quickLinksFooter">ัๆวศุ ำัํฺษ | Quick Links</h4>
                 <ul>
-                    <li><a href="index.html">ุงูุฑุฆูุณูุฉ</a></li>
-                    <li><a href="services.html">ุงูุฎุฏู…ุงุช</a></li>
-                    <li><a href="projects.html">ู…ุดุงุฑูุนูุง</a></li>
-                    <li><a href="index.html#about-us">ุนู ุงูุดุฑูุฉ</a></li>
+                    <li><a href="index.html" data-lang-key="navHomeFooter">วแัฦํำํษ | Home</a></li>
+                    <li><a href="services.html" data-lang-key="navServicesFooter">วแฮฯใวส | Services</a></li>
+                    <li><a href="projects.html" data-lang-key="navProjectsFooter">ใิวัํฺไว | Projects</a></li>
+                    <li><a href="about.html" data-lang-key="navAboutFooter">ฺไ วแิั฿ษ | About Us</a></li>
+                    <li><a href="contact.html" data-lang-key="navContactFooter">วสีแ ศไว | Contact Us</a></li>
                 </ul>
             </div>
-            <div class="footer-col google-map">
-                <h4>ู…ููุนูุง ุนูู ุงูุฎุฑูุทุฉ</h4>
-                <iframe src="http://googleusercontent.com/maps.google.com/3" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="footer-col google-map animate__animated animate__fadeInUp animate__delay-0-4s">
+                <h4 data-lang-key="ourLocationFooter">ใๆÞฺไว ฺแ์ วแฮัํุษ | Our Location on Map</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3448.971934980753!2d31.14447938506041!3d30.22271831818296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14587661b65e996f%3A0x6b1f2e0c0c6c7c6c!2sYour%20Company%20Location!5e0!3m2!1sen!2seg!4v1678901234567!5m2!1sen!2seg" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>ยฉ 2025 ุฅุณูุงุฏ. ุฌู…ูุน ุงูุญููู ู…ุญููุธุฉ.</p>
+            <p data-lang-key="copyrightFooter">ฉ 2025 ลำไวฯ. ฬใํฺ วแอÞๆÞ ใอÝๆูษ. | ฉ 2025 ESNAD. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/YOUR_PHONE_NUMBER" class="whatsapp-float" target="_blank" aria-label="ุชูุงุตู ู…ุนูุง ุนุจุฑ ูุงุชุณุงุจ">
+    <a href="https://wa.me/201157444190" class="whatsapp-float animate__animated animate__bounceIn" target="_blank" aria-label="Contact us via WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script src="script.js"></script>
+    <script>
+        // Data for translations (can be moved to a separate file or be part of script.js)
+        const translations = {
+            ar: {
+                homeTitle: "วแัฦํำํษ - ลำไวฯ",
+                navHome: "วแัฦํำํษ",
+                navProducts: "วแใไสฬวส",
+                navAllProducts: "฿แ วแใไสฬวส",
+                navAirDucts: "ใฬวัํ วแๅๆวม",
+                navAirOutlets: "ใฮวัฬ วแๅๆวม",
+                navDampers: "วแฯใศัวส",
+                navProjects: "วแใิวัํฺ",
+                navServices: "วแฮฯใวส",
+                navAbout: "ฺไ วแิั฿ษ",
+                navContact: "วสีแ ศไว",
+                heroTitle: "อแๆแ ใศส฿ัษ Ýํ ใฬวแ วแส฿ํํÝ ๆวแสๅๆํษ",
+                heroText: "ไÞฯใ รอฯห วแสÞไํวส ๆวแอแๆแ วแๅไฯำํษ แสแศํษ วอสํวฬวส฿ใ.",
+                heroButton: "ว฿สิÝ ใิวัํฺไว",
+                featuredProductsTitle: "รอฯห วแใไสฬวส",
+                viewAllProductsButton: "ฺัึ ฬใํฺ วแใไสฬวส",
+                aboutUsTitle: "ฺไ ิั฿สไว",
+                aboutUsText: "ไอไ ิั฿ษ ลำไวฯก ัๆวฯ Ýํ สีใํใ ๆสีไํฺ ๆสั฿ํศ รไูใษ วแส฿ํํÝ ๆวแสๅๆํษ ฺวแํษ วแฬๆฯษ. ไแสาใ ศสÞฯํใ อแๆแ ใศส฿ัษ ๆÝฺวแษ สแศํ วอสํวฬวส ฺใแวฦไว วแใสÛํัษก ใฺ วแสั฿ํา ฺแ์ วแ฿Ýวมษ วแสิÛํแํษ ๆวแวำสฯวใษ วแศํฦํษ.",
+                readMoreButton: "วÞัร วแใาํฯ",
+                ourServicesTitle: "ฮฯใวสไว",
+                service1Title: "สีใํใ รไูใษ วแส฿ํํÝ",
+                service1Text: "ไÞฯใ ฮฯใวส สีใํใ ใส฿วใแษ แรไูใษ วแส฿ํํÝ วแใั฿าํ ๆวแใÞวำใ วแๅๆวฦํษก แึใวไ รÝึแ รฯวม ๆ฿Ýวมษ.",
+                service2Title: "สีไํฺ ใฬวัํ วแๅๆวม",
+                service2Text: "ใสฮีีๆไ Ýํ สีไํฺ ใฬวัํ วแๅๆวม ศรฺแ์ ใฺวํํั วแฬๆฯษ ใไ วแีแศ วแใฬแÝไ ๆวแำสวไแำ ำสํแ ๆวแรแๆใไํๆใ.",
+                service3Title: "สั฿ํศ ๆีํวไษ",
+                service3Text: "ฮฯใวส สั฿ํศ ๆีํวไษ วอสัวÝํษ แฬใํฺ รไูใษ วแสๅๆํษ ๆวแส฿ํํÝ แึใวไ วแสิÛํแ วแรใหแ.",
+                discoverServicesButton: "ว฿สิÝ ฮฯใวสไว",
+                contactUsFooter: "สๆวีแ ใฺไว",
+                footerAddress: "ศวำุๆำ วแÞไวุั วแฮํัํษก วแÞแํๆศํษก ใีั",
+                quickLinksFooter: "ัๆวศุ ำัํฺษ",
+                navHomeFooter: "วแัฦํำํษ",
+                navServicesFooter: "วแฮฯใวส",
+                navProjectsFooter: "ใิวัํฺไว",
+                navAboutFooter: "ฺไ วแิั฿ษ",
+                navContactFooter: "วสีแ ศไว",
+                ourLocationFooter: "ใๆÞฺไว ฺแ์ วแฮัํุษ",
+                copyrightFooter: "ฉ 2025 ลำไวฯ. ฬใํฺ วแอÞๆÞ ใอÝๆูษ."
+            },
+            en: {
+                homeTitle: "Home - ESNAD",
+                navHome: "Home",
+                navProducts: "Products",
+                navAllProducts: "All Products",
+                navAirDucts: "Air Ducts",
+                navAirOutlets: "Air Outlets",
+                navDampers: "Dampers",
+                navProjects: "Projects",
+                navServices: "Services",
+                navAbout: "About Us",
+                navContact: "Contact Us",
+                heroTitle: "Innovative HVAC Solutions",
+                heroText: "We offer the latest technologies and engineering solutions to meet your needs.",
+                heroButton: "Discover Our Projects",
+                featuredProductsTitle: "Latest Products",
+                viewAllProductsButton: "View All Products",
+                aboutUsTitle: "About Our Company",
+                aboutUsText: "We are ESNAD, leaders in designing, manufacturing, and installing high-quality HVAC systems. We are committed to providing innovative and effective solutions that meet our clients' evolving needs, focusing on operational efficiency and environmental sustainability.",
+                readMoreButton: "Read More",
+                ourServicesTitle: "Our Services",
+                service1Title: "HVAC System Design",
+                service1Text: "We offer integrated design services for central air conditioning and air handling units, ensuring optimal performance and efficiency.",
+                service2Title: "Ductwork Manufacturing",
+                service2Text: "Specialists in manufacturing high-quality ductwork from galvanized steel, stainless steel, and aluminum.",
+                service3Title: "Installation & Maintenance",
+                service3Text: "Professional installation and maintenance services for all ventilation and air conditioning systems to ensure optimal operation.",
+                discoverServicesButton: "Discover Our Services",
+                contactUsFooter: "Contact Us",
+                footerAddress: "Basos Al-Qanater Al-Khariia, Qalyubia, Egypt",
+                quickLinksFooter: "Quick Links",
+                navHomeFooter: "Home",
+                navServicesFooter: "Services",
+                navProjectsFooter: "Projects",
+                navAboutFooter: "About Us",
+                navContactFooter: "Contact Us",
+                ourLocationFooter: "Our Location on Map",
+                copyrightFooter: "ฉ 2025 ESNAD. All Rights Reserved."
+            }
+        };
+
+        let currentLang = 'ar'; // Default language
+
+        // Function to apply translations
+        function applyTranslations() {
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+
+            // Update title
+            const titleElement = document.querySelector('title');
+            const titleKey = titleElement.getAttribute('data-lang-key');
+            if (translations[currentLang] && translations[currentLang][titleKey]) {
+                titleElement.textContent = translations[currentLang][titleKey];
+            }
+
+            // Update HTML lang and dir attributes
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = (currentLang === 'ar') ? 'rtl' : 'ltr';
+
+            // Update text alignment for body (if not already handled by CSS based on dir)
+            document.body.style.textAlign = (currentLang === 'ar') ? 'right' : 'left';
+
+            // Re-display featured products to apply language-specific product names/descriptions
+            if (typeof productsData !== 'undefined') {
+                displayFeaturedProducts(productsData, document.getElementById('featuredProductsGrid'));
+            }
+        }
+
+        // Event listeners for language switcher buttons
+        document.getElementById('lang-ar').addEventListener('click', () => {
+            currentLang = 'ar';
+            applyTranslations();
+            document.getElementById('lang-ar').classList.add('active');
+            document.getElementById('lang-en').classList.remove('active');
+        });
+
+        document.getElementById('lang-en').addEventListener('click', () => {
+            currentLang = 'en';
+            applyTranslations();
+            document.getElementById('lang-en').classList.add('active');
+            document.getElementById('lang-ar').classList.remove('active');
+        });
+
+        // Mobile Menu Toggle (แีÝอวส ใสฺฯฯษ)
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mainNavUl = document.querySelector('.main-nav ul');
+
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', () => {
+                mainNavUl.classList.toggle('active');
+                mobileMenu.querySelector('i').classList.toggle('fa-bars');
+                mobileMenu.querySelector('i').classList.toggle('fa-times');
+            });
+        }
+
+        // ๆูํÝษ แฺัึ วแใไสฬวส วแใใําษ Ýํ ีÝอษ index.html
+        // ๅะๅ วแๆูํÝษ สฺสใฯ วแยไ ฺแ์ `productsData` วแสํ ํฬศ รไ สอสๆํ ฺแ์ ศํวไวส หไวฦํษ วแแÛษ
+        function displayFeaturedProducts(products, containerElement) {
+            containerElement.innerHTML = ''; // ใำอ รํ ใอสๆ์ ำวศÞ
+
+            const productsToShow = products.slice(0, 3); // ฺัึ รๆแ 3 ใไสฬวส ÝÞุ
+
+            productsToShow.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.classList.add('product-card', 'animate__animated', 'animate__fadeInUp');
+
+                const imageUrl = product.image || `https://via.placeholder.com/300x200/1E2B38/E67E22?text=${encodeURIComponent(product[`name_${currentLang}`] || product.name_ar)}`;
+
+                productCard.innerHTML = `
+                    <img src="${imageUrl}" alt="${product[`name_${currentLang}`] || product.name_ar}">
+                    <h3>${product[`name_${currentLang}`] || product.name_ar}</h3>
+                    <p>${(product[`description_${currentLang}`] || product.description_ar).substring(0, 100)}...</p>
+                    <a href="products.html?id=${product.id}" class="view-details" data-lang-key="viewDetailsButton">ฺัึ วแสÝวีํแ | View Details</a>
+                `;
+                containerElement.appendChild(productCard);
+
+                // Apply translation to the "view details" button within the dynamically created card
+                const viewDetailsButton = productCard.querySelector('.view-details');
+                if (viewDetailsButton && translations[currentLang] && translations[currentLang]['viewDetailsButton']) {
+                    viewDetailsButton.textContent = translations[currentLang]['viewDetailsButton'];
+                }
+            });
+        }
+
+        // ฺไฯ สอใํแ วแีÝอษก วำสฯฺ๖ ฯวแษ ฺัึ วแใไสฬวส วแใใําษ ๆสุศํÞ วแสัฬใษ วแรๆแํษ
+        document.addEventListener('DOMContentLoaded', () => {
+            // Apply initial translation based on defaultLang
+            applyTranslations();
+
+            // Display featured products from productsData (assumed to be available globally from script.js)
+            if (typeof productsData !== 'undefined') {
+                displayFeaturedProducts(productsData, document.getElementById('featuredProductsGrid'));
+            } else {
+                console.error("productsData array is not defined or not loaded correctly.");
+            }
+        });
+    </script>
 </body>
 </html>
-
