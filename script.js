@@ -1,806 +1,768 @@
-// ÈíÇäÇÊ ÇáãäÊÌÇÊ
-// Êã ÊÍÏíË åĞå ÇáãÕİæİÉ áÊÔãá ÃÓãÇÁ æÃæÕÇİ æãíÒÇÊ æãæÇÕİÇÊ ÈÇááÛÊíä ÇáÚÑÈíÉ æÇáÅäÌáíÒíÉ.
+ï»¿// Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª
+// ÙŠÙ…ÙƒÙ†Ùƒ Ø¥Ø¶Ø§ÙØ© Ø§Ù„Ù…Ø²ÙŠØ¯ Ù…Ù† Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª Ù‡Ù†Ø§ Ø£Ùˆ ØªØ¹Ø¯ÙŠÙ„ Ø§Ù„Ù…ÙˆØ¬ÙˆØ¯Ø©.
+// ØªØ£ÙƒØ¯ Ø£Ù† 'id' Ù„ÙƒÙ„ Ù…Ù†ØªØ¬ ÙØ±ÙŠØ¯ ÙˆØ£Ù† 'downloadLink' ÙŠØ´ÙŠØ± Ù„Ù…Ù„Ù PDF Ø­Ù‚ÙŠÙ‚ÙŠ.
 const productsData = [
     {
         id: 'square-ducts',
         category: 'air-ducts',
-        name_ar: 'ãÌÇÑí åæÇÁ ãÑÈÚÉ',
-        name_en: 'Square Air Ducts',
-        description_ar: 'ÊÕãíã ãÊíä æÚÇáí ÇáßİÇÁÉ¡ ãËÇáí ááÊØÈíŞÇÊ ÇáÊÌÇÑíÉ æÇáÕäÇÚíÉ ÇáÊí ÊÊØáÈ ÊÏİŞ åæÇÁ ßÈíÑ. ÊõÕäÚ ãä ÃÌæÏ ÃäæÇÚ ÃáæÇÍ ÇáÕáÈ ÇáãÌáİä Ãæ ÇáÓÊÇäáÓ ÓÊíá¡ æÊæİÑ ãŞÇæãÉ ÚÇáíÉ ááÊÂßá æÚãÑ ÇİÊÑÇÖí Øæíá. ÊÊæÇİŞ ãÚ ÃÚáì ãÚÇííÑ ÇáÌæÏÉ æÇáÓáÇãÉ.',
-        description_en: 'Durable and high-efficiency design, ideal for commercial and industrial applications requiring large airflow. Made from the finest galvanized steel or stainless steel sheets, providing high corrosion resistance and a long lifespan. Complies with the highest quality and safety standards.',
+        name: 'Ù…Ø¬Ø§Ø±ÙŠ Ù‡ÙˆØ§Ø¡ Ù…Ø±Ø¨Ø¹Ø© (Square Ducts)',
+        description: 'ØªØµÙ…ÙŠÙ… Ù…ØªÙŠÙ† ÙˆØ¹Ø§Ù„ÙŠ Ø§Ù„ÙƒÙØ§Ø¡Ø©ØŒ Ù…Ø«Ø§Ù„ÙŠ Ù„Ù„ØªØ·Ø¨ÙŠÙ‚Ø§Øª Ø§Ù„ØªØ¬Ø§Ø±ÙŠØ© ÙˆØ§Ù„ØµÙ†Ø§Ø¹ÙŠØ© Ø§Ù„ØªÙŠ ØªØªØ·Ù„Ø¨ ØªØ¯ÙÙ‚ Ù‡ÙˆØ§Ø¡ ÙƒØ¨ÙŠØ±. ØªÙØµÙ†Ø¹ Ù…Ù† Ø£Ø¬ÙˆØ¯ Ø£Ù†ÙˆØ§Ø¹ Ø£Ù„ÙˆØ§Ø­ Ø§Ù„ØµÙ„Ø¨ Ø§Ù„Ù…Ø¬Ù„ÙÙ† Ø£Ùˆ Ø§Ù„Ø³ØªØ§Ù†Ù„Ø³ Ø³ØªÙŠÙ„ØŒ ÙˆØªÙˆÙØ± Ù…Ù‚Ø§ÙˆÙ…Ø© Ø¹Ø§Ù„ÙŠØ© Ù„Ù„ØªØ¢ÙƒÙ„ ÙˆØ¹Ù…Ø± Ø§ÙØªØ±Ø§Ø¶ÙŠ Ø·ÙˆÙŠÙ„. ØªØªÙˆØ§ÙÙ‚ Ù…Ø¹ Ø£Ø¹Ù„Ù‰ Ù…Ø¹Ø§ÙŠÙŠØ± Ø§Ù„Ø¬ÙˆØ¯Ø© ÙˆØ§Ù„Ø³Ù„Ø§Ù…Ø©.',
         image: 'https://via.placeholder.com/800x600/1E2B38/E67E22?text=Ducting+Square+Detail',
-        features_ar: [
-            'ãÕäæÚÉ ãä ÇáÕáÈ ÇáãÌáİä ÚÇáí ÇáÌæÏÉ Ãæ ÇáÓÊÇäáÓ ÓÊíá.',
-            'ÊÕãíã ãÍßã íŞáá ãä ÊÓÑÈ ÇáåæÇÁ.',
-            'ÓåáÉ ÇáÊÑßíÈ æÇáÕíÇäÉ.',
-            'ãÊæİÑÉ ÈÃÈÚÇÏ æãŞÇÓÇÊ ãÎÕÕÉ áÊäÇÓÈ ÇÍÊíÇÌÇÊ ÇáãÔÑæÚ.',
-            'ãŞÇæãÉ ááÊÂßá æÇáÕÏÃ.'
+        features: [
+            'Ù…ØµÙ†ÙˆØ¹Ø© Ù…Ù† Ø§Ù„ØµÙ„Ø¨ Ø§Ù„Ù…Ø¬Ù„ÙÙ† Ø¹Ø§Ù„ÙŠ Ø§Ù„Ø¬ÙˆØ¯Ø© Ø£Ùˆ Ø§Ù„Ø³ØªØ§Ù†Ù„Ø³ Ø³ØªÙŠÙ„.',
+            'ØªØµÙ…ÙŠÙ… Ù…Ø­ÙƒÙ… ÙŠÙ‚Ù„Ù„ Ù…Ù† ØªØ³Ø±Ø¨ Ø§Ù„Ù‡ÙˆØ§Ø¡.',
+            'Ø³Ù‡Ù„Ø© Ø§Ù„ØªØ±ÙƒÙŠØ¨ ÙˆØ§Ù„ØµÙŠØ§Ù†Ø©.',
+            'Ù…ØªÙˆÙØ±Ø© Ø¨Ø£Ø¨Ø¹Ø§Ø¯ ÙˆÙ…Ù‚Ø§Ø³Ø§Øª Ù…Ø®ØµØµØ© Ù„ØªÙ†Ø§Ø³Ø¨ Ø§Ø­ØªÙŠØ§Ø¬Ø§Øª Ø§Ù„Ù…Ø´Ø±ÙˆØ¹.',
+            'Ù…Ù‚Ø§ÙˆÙ…Ø© Ù„Ù„ØªØ¢ÙƒÙ„ ÙˆØ§Ù„ØµØ¯Ø£.'
         ],
-        features_en: [
-            'Made from high-quality galvanized steel or stainless steel.',
-            'Sealed design reduces air leakage.',
-            'Easy to install and maintain.',
-            'Available in custom dimensions and sizes to suit project needs.',
-            'Corrosion and rust resistant.'
-        ],
-        specs_ar: {
-            'ÇáãÇÏÉ': 'ÇáÕáÈ ÇáãÌáİä / ÇáÓÊÇäáÓ ÓÊíá',
-            'ÇáÓãÇßÉ': 'ÍÓÈ ÇáãæÇÕİÇÊ ÇáİäíÉ ÇáãØáæÈÉ',
-            'ÇáÃÈÚÇÏ': 'ãÎÕÕÉ (ãÑÈÚÉ/ãÓÊØíáÉ)',
-            'ÇáÊØÈíŞÇÊ': 'ÇáãÈÇäí ÇáÊÌÇÑíÉ æÇáÕäÇÚíÉ¡ ÇáãÓÊÔİíÇÊ¡ ÇáãÏÇÑÓ.'
+        specs: {
+            'Ø§Ù„Ù…Ø§Ø¯Ø©': 'Ø§Ù„ØµÙ„Ø¨ Ø§Ù„Ù…Ø¬Ù„ÙÙ† / Ø§Ù„Ø³ØªØ§Ù†Ù„Ø³ Ø³ØªÙŠÙ„',
+            'Ø§Ù„Ø³Ù…Ø§ÙƒØ©': 'Ø­Ø³Ø¨ Ø§Ù„Ù…ÙˆØ§ØµÙØ§Øª Ø§Ù„ÙÙ†ÙŠØ© Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©',
+            'Ø§Ù„Ø£Ø¨Ø¹Ø§Ø¯': 'Ù…Ø®ØµØµØ© (Ù…Ø±Ø¨Ø¹Ø©/Ù…Ø³ØªØ·ÙŠÙ„Ø©)',
+            'Ø§Ù„ØªØ·Ø¨ÙŠÙ‚Ø§Øª': 'Ø§Ù„Ù…Ø¨Ø§Ù†ÙŠ Ø§Ù„ØªØ¬Ø§Ø±ÙŠØ©ØŒ Ø§Ù„Ù…ØµØ§Ù†Ø¹ØŒ Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹Ø§ØªØŒ Ø§Ù„Ù…Ø³ØªØ´ÙÙŠØ§Øª'
         },
-        specs_en: {
-            'Material': 'Galvanized Steel / Stainless Steel',
-            'Thickness': 'As per technical specifications',
-            'Dimensions': 'Custom (Square/Rectangular)',
-            'Applications': 'Commercial and industrial buildings, hospitals, schools.'
-        },
-        downloadLink_ar: 'ESNAD air outlets submittal.pdf', // ÑÇÈØ ãáİ ÇáÜ PDF ÈÇáÚÑÈí
-        downloadLink_en: 'ESNAD air outlets submittal.pdf'  // ÑÇÈØ ãáİ ÇáÜ PDF ÈÇáÅäÌáíÒí (íãßä Ãä íßæä äİÓ Çáãáİ ÅĞÇ ßÇä ËäÇÆí ÇááÛÉ)
+        downloadLink: 'YOUR_DOWNLOAD_LINK_FOR_SQUARE_DUCTS_DATASHEET.pdf'
     },
     {
         id: 'round-ducts',
         category: 'air-ducts',
-        name_ar: 'ãÌÇÑí åæÇÁ ÏÇÆÑíÉ',
-        name_en: 'Round Air Ducts',
-        description_ar: 'ÊõÓÊÎÏã ãÌÇÑí ÇáåæÇÁ ÇáÏÇÆÑíÉ İí ÇáÃäÙãÉ ÇáÊí ÊÊØáÈ ÊÏİŞ åæÇÁ ÓáÓ æãŞÇæãÉ ãäÎİÖÉ¡ ããÇ íæİÑ ßİÇÁÉ ØÇŞÉ ÚÇáíÉ. ÊÕãíãåÇ ÇáÃäíŞ íÌÚáåÇ ãäÇÓÈÉ ááÊÑßíÈ ÇáÙÇåÑ İí ÈÚÖ ÇáãÔÇÑíÚ. ãÊæİÑÉ ÈÃŞØÇÑ æãæÇÕİÇÊ ãÎÊáİÉ.',
-        description_en: 'Round air ducts are used in systems requiring smooth airflow and low resistance, providing high energy efficiency. Their sleek design makes them suitable for exposed installations in some projects. Available in various diameters and specifications.',
-        image: 'https://via.placeholder.com/800x600/1E2B38/E67E22?text=Ducting+Round+Detail',
-        features_ar: [
-            'ÊÕãíã ÇäÓíÇÈí áÊŞáíá İŞÏÇä ÇáÖÛØ.',
-            'ÓåáÉ ÇáÊäÙíİ æÇáÕíÇäÉ.',
-            'ãäÇÓÈÉ ááÊÑßíÈÇÊ ÇáãÑÆíÉ æÛíÑ ÇáãÑÆíÉ.',
-            'ÊæİÑ ÃÚáì ãÚÇííÑ ÇáäÙÇİÉ æÇáÌæÏÉ.',
-            'ÚÒá ÍÑÇÑí æÕæÊí İÚÇá.'
+        name: 'Ù…Ø¬Ø§Ø±ÙŠ Ù‡ÙˆØ§Ø¡ Ø¯Ø§Ø¦Ø±ÙŠØ© (Round Ducts)',
+        description: 'ØªØªÙ…ÙŠØ² Ø¨Ù…Ø±ÙˆÙ†Ø© Ø¹Ø§Ù„ÙŠØ© ÙˆØ³Ù‡ÙˆÙ„Ø© ÙÙŠ Ø§Ù„ØªØ±ÙƒÙŠØ¨ØŒ ÙˆØªÙˆÙØ± ØªØ¯ÙÙ‚ Ù‡ÙˆØ§Ø¡ Ø³Ù„Ø³ Ù…Ø¹ Ø£Ù‚Ù„ ÙÙ‚Ø¯Ø§Ù† Ù„Ù„Ø¶ØºØ·. ØªÙØ³ØªØ®Ø¯Ù… Ø¨Ø´ÙƒÙ„ Ø´Ø§Ø¦Ø¹ ÙÙŠ Ø§Ù„Ø£Ù†Ø¸Ù…Ø© Ø§Ù„ØªÙŠ ØªØªØ·Ù„Ø¨ ÙƒÙØ§Ø¡Ø© ØªØ¯ÙÙ‚ Ø¹Ø§Ù„ÙŠØ© ÙˆÙ…Ø¸Ù‡Ø± Ø¬Ù…Ø§Ù„ÙŠ. Ù…ØªÙˆÙØ±Ø© Ø¨Ø£Ù‚Ø·Ø§Ø± Ù…Ø®ØªÙ„ÙØ© Ù„ØªÙ†Ø§Ø³Ø¨ Ù…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„ØªÙ‡ÙˆÙŠØ© ÙˆØ§Ù„ØªÙƒÙŠÙŠÙ Ø§Ù„Ù…ØªÙ†ÙˆØ¹Ø©.',
+        image: 'https://via.placeholder.com/800x600/E67E22/1E2B38?text=Ducting+Round+Detail',
+        features: [
+            'ØªØ¯ÙÙ‚ Ù‡ÙˆØ§Ø¡ Ø³Ù„Ø³ ÙŠÙ‚Ù„Ù„ Ù…Ù† Ø§Ù„Ø¶ÙˆØ¶Ø§Ø¡.',
+            'Ø³Ù‡Ù„Ø© Ø§Ù„ØªØ±ÙƒÙŠØ¨ ÙˆØªØªØ·Ù„Ø¨ Ù…Ø³Ø§Ø­Ø© Ø£Ù‚Ù„.',
+            'ÙƒÙØ§Ø¡Ø© Ø¹Ø§Ù„ÙŠØ© ÙÙŠ Ù†Ù‚Ù„ Ø§Ù„Ù‡ÙˆØ§Ø¡.',
+            'Ù…ØªÙˆÙØ±Ø© Ø¨Ø£Ù‚Ø·Ø§Ø± Ù…ØªÙ†ÙˆØ¹Ø©.',
+            'Ù…Ø«Ø§Ù„ÙŠØ© Ù„Ù„Ù…Ø³Ø§Ø­Ø§Øª Ø§Ù„Ø¶ÙŠÙ‚Ø©.'
         ],
-        features_en: [
-            'Streamlined design to reduce pressure loss.',
-            'Easy to clean and maintain.',
-            'Suitable for visible and concealed installations.',
-            'Provides the highest standards of cleanliness and quality.',
-            'Effective thermal and acoustic insulation.'
-        ],
-        specs_ar: {
-            'ÇáãÇÏÉ': 'ÇáÕáÈ ÇáãÌáİä / ÇáÃáæãäíæã',
-            'ÇáÃŞØÇÑ': 'ãä 100 ãã Åáì 1200 ãã',
-            'ÇáÊØÈíŞÇÊ': 'ÇáãØÇÚã¡ ÇáãßÇÊÈ¡ ÇáæÍÏÇÊ ÇáÓßäíÉ ÇáßÈíÑÉ.'
+        specs: {
+            'Ø§Ù„Ù…Ø§Ø¯Ø©': 'Ø§Ù„ØµÙ„Ø¨ Ø§Ù„Ù…Ø¬Ù„ÙÙ† / Ø§Ù„Ø³ØªØ§Ù†Ù„Ø³ Ø³ØªÙŠÙ„',
+            'Ø§Ù„Ù‚Ø·Ø±': 'Ù…ØªÙˆÙØ± Ø¨Ø£Ø­Ø¬Ø§Ù… Ù‚ÙŠØ§Ø³ÙŠØ© ÙˆÙ…Ø®ØµØµØ©',
+            'Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…': 'Ø§Ù„Ù…ÙƒØ§ØªØ¨ØŒ Ø§Ù„Ù…Ø·Ø§Ø¹Ù…ØŒ Ø§Ù„Ù…Ø¨Ø§Ù†ÙŠ Ø§Ù„Ø³ÙƒÙ†ÙŠØ©ØŒ Ø§Ù„Ù…Ø®ØªØ¨Ø±Ø§Øª'
         },
-        specs_en: {
-            'Material': 'Galvanized Steel / Aluminum',
-            'Diameters': 'From 100mm to 1200mm',
-            'Applications': 'Restaurants, offices, large residential units.'
-        },
-        downloadLink_ar: 'ESNAD air outlets submittal.pdf',
-        downloadLink_en: 'ESNAD air outlets submittal.pdf'
+        downloadLink: 'YOUR_DOWNLOAD_LINK_FOR_ROUND_DUCTS_DATASHEET.pdf'
     },
     {
-        id: 'flexible-ducts',
-        category: 'air-ducts',
-        name_ar: 'ãÌÇÑí åæÇÁ ãÑäÉ',
-        name_en: 'Flexible Air Ducts',
-        description_ar: 'ãÌÇÑí ÇáåæÇÁ ÇáãÑäÉ ãËÇáíÉ ááæÕáÇÊ ÇáäåÇÆíÉ Èíä ãÌÇÑí ÇáåæÇÁ ÇáÑÆíÓíÉ æãÎÇÑÌ ÇáåæÇÁ¡ æÊæİÑ ÓåæáÉ İí ÇáÊÑßíÈ æÇáÊæÌíå Íæá ÇáÚæÇÆŞ. ãÊæİÑÉ ÈÃäæÇÚ ãÚÒæáÉ æÛíÑ ãÚÒæáÉ áÖãÇä ßİÇÁÉ ÇáäÙÇã.',
-        description_en: 'Flexible air ducts are ideal for final connections between main ducts and air outlets, offering easy installation and routing around obstacles. Available in insulated and non-insulated types to ensure system efficiency.',
-        image: 'https://via.placeholder.com/800x600/1E2B38/E67E22?text=Ducting+Flexible+Detail',
-        features_ar: [
-            'ãÑæäÉ ÚÇáíÉ æÓåæáÉ İí ÇáÊÔßíá.',
-            'ãÊæİÑÉ ÈÚÒá ÍÑÇÑí æÕæÊí ããÊÇÒ.',
-            'ãŞÇæãÉ ááäãæ ÇáÈßÊíÑí æÇáİØÑíÇÊ.',
-            'ãËÇáíÉ ááãÓÇÍÇÊ ÇáÖíŞÉ Ãæ ÇáÃãÇßä ĞÇÊ ÇáÊÎØíØ ÇáãÚŞÏ.',
-            'ÊÑßíÈ ÓÑíÚ æÓåá.'
+        id: 'standard-ahu',
+        category: 'ahu-units',
+        name: 'ÙˆØ­Ø¯Ø§Øª Ù…Ù†Ø§ÙˆÙ„Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ (AHU) Ù‚ÙŠØ§Ø³ÙŠØ©',
+        description: 'ÙˆØ­Ø¯Ø§Øª Ø¹Ø§Ù„ÙŠØ© Ø§Ù„Ø£Ø¯Ø§Ø¡ Ù„ØªÙƒÙŠÙŠÙ ÙˆØªÙ†Ù‚ÙŠØ© Ø§Ù„Ù‡ÙˆØ§Ø¡ ÙÙŠ Ø§Ù„Ù…Ø³Ø§Ø­Ø§Øª Ø§Ù„ÙƒØ¨ÙŠØ±Ø©ØŒ Ø¨ØªØµØ§Ù…ÙŠÙ… Ù…ØªØ¹Ø¯Ø¯Ø© ØªÙ„Ø¨ÙŠ Ø§Ù„Ø§Ø­ØªÙŠØ§Ø¬Ø§Øª Ø§Ù„ØµÙ†Ø§Ø¹ÙŠØ© ÙˆØ§Ù„ØªØ¬Ø§Ø±ÙŠØ©. ØªÙˆÙØ± ØªØ­ÙƒÙ…Ù‹Ø§ Ø¯Ù‚ÙŠÙ‚Ù‹Ø§ ÙÙŠ Ø¯Ø±Ø¬Ø© Ø§Ù„Ø­Ø±Ø§Ø±Ø© ÙˆØ§Ù„Ø±Ø·ÙˆØ¨Ø© ÙˆØ¬ÙˆØ¯Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ØŒ Ù…Ù…Ø§ ÙŠØ¶Ù…Ù† Ø¨ÙŠØ¦Ø© Ø¯Ø§Ø®Ù„ÙŠØ© Ù…Ø±ÙŠØ­Ø© ÙˆØµØ­ÙŠØ©.',
+        image: 'https://via.placeholder.com/800x600/2C3E50/E67E22?text=Standard+AHU+Detail',
+        features: [
+            'ÙƒÙØ§Ø¡Ø© Ø¹Ø§Ù„ÙŠØ© ÙÙŠ Ø§Ø³ØªÙ‡Ù„Ø§Ùƒ Ø§Ù„Ø·Ø§Ù‚Ø©.',
+            'Ù†Ø¸Ø§Ù… ÙÙ„ØªØ±Ø© Ù…ØªØ¹Ø¯Ø¯ Ø§Ù„Ù…Ø±Ø§Ø­Ù„ Ù„ØªÙ†Ù‚ÙŠØ© Ø§Ù„Ù‡ÙˆØ§Ø¡.',
+            'ØªØ­ÙƒÙ… Ø¯Ù‚ÙŠÙ‚ ÙÙŠ Ø¯Ø±Ø¬Ø© Ø§Ù„Ø­Ø±Ø§Ø±Ø© ÙˆØ§Ù„Ø±Ø·ÙˆØ¨Ø©.',
+            'ØªØµÙ…ÙŠÙ… ÙˆØ­Ø¯Ø§Øª Ù…Ø±Ù† ÙŠÙ†Ø§Ø³Ø¨ Ù…Ø®ØªÙ„Ù Ø§Ù„ØªØ·Ø¨ÙŠÙ‚Ø§Øª.',
+            'Ù…ÙƒÙˆÙ†Ø§Øª Ø¹Ø§Ù„ÙŠØ© Ø§Ù„Ø¬ÙˆØ¯Ø© Ù„Ø¶Ù…Ø§Ù† Ø·ÙˆÙ„ Ø§Ù„Ø¹Ù…Ø± Ø§Ù„Ø§ÙØªØ±Ø§Ø¶ÙŠ.'
         ],
-        features_en: [
-            'High flexibility and easy shaping.',
-            'Available with excellent thermal and acoustic insulation.',
-            'Resistant to bacterial and fungal growth.',
-            'Ideal for confined spaces or complex layouts.',
-            'Quick and easy installation.'
-        ],
-        specs_ar: {
-            'ÇáãÇÏÉ': 'ÇáÃáæãäíæã ÇáãÏÚã ÈÓáß İæáÇĞí / ÇáÈæáíÓÊÑ',
-            'ÇáÃŞØÇÑ': 'ãä 4 ÈæÕÉ Åáì 20 ÈæÕÉ',
-            'ÇáÊØÈíŞÇÊ': 'æÕáÇÊ ÇáãÎÇÑÌ ÇáåæÇÆíÉ¡ ÃäÙãÉ ÇáÊßííİ ÇáãäÒáí æÇáÊÌÇÑí ÇáÎİíİ.'
+        specs: {
+            'Ø§Ù„Ù‚Ø¯Ø±Ø©': 'ØªØªØ±Ø§ÙˆØ­ Ù…Ù† 1000 CFM Ø¥Ù„Ù‰ 100,000 CFM',
+            'Ù…ØµØ¯Ø± Ø§Ù„Ø·Ø§Ù‚Ø©': 'ÙƒÙ‡Ø±Ø¨Ø§Ø¦ÙŠ',
+            'Ø§Ù„ÙÙ„Ø§ØªØ±': 'G4, F7, H13 (Ø­Ø³Ø¨ Ø§Ù„Ø·Ù„Ø¨)',
+            'Ø§Ù„ØªØ­ÙƒÙ…': 'Ù†Ø¸Ø§Ù… BMS Ù…ØªÙƒØ§Ù…Ù„'
         },
-        specs_en: {
-            'Material': 'Aluminum foil reinforced with steel wire / Polyester',
-            'Diameters': 'From 4 inches to 20 inches',
-            'Applications': 'Air outlet connections, residential and light commercial HVAC systems.'
-        },
-        downloadLink_ar: 'ESNAD air outlets submittal.pdf',
-        downloadLink_en: 'ESNAD air outlets submittal.pdf'
+        downloadLink: 'YOUR_DOWNLOAD_LINK_FOR_STANDARD_AHU_DATASHEET.pdf'
     },
     {
-        id: 'linear-slot-diffusers',
-        category: 'air-outlets',
-        name_ar: 'ãæÒÚÇÊ åæÇÁ ÎØíÉ (Linear Slot Diffusers)',
-        name_en: 'Linear Slot Diffusers',
-        description_ar: 'ÊõŞÏã ãæÒÚğÇ ÎØíğÇ ÃäíŞğÇ æÚÕÑíğÇ¡ íãÊÒÌ ÈÓáÇÓÉ ãÚ Ãí ÊÕãíã ÏÇÎáí. íæİÑ ÊæÒíÚğÇ ãæÍÏğÇ ááåæÇÁ ãÚ ÇáÍİÇÙ Úáì ÌãÇáíÉ ÇáãßÇä. ãËÇáí ááãßÇÊÈ¡ ÇáİäÇÏŞ¡ æÇáãÓÇÍÇÊ ÇáÊÌÇÑíÉ ÇáÑÇŞíÉ.',
-        description_en: 'Offers a sleek and modern linear diffuser, blending seamlessly with any interior design. Provides uniform air distribution while maintaining aesthetic appeal. Ideal for offices, hotels, and upscale commercial spaces.',
-        image: 'https://via.placeholder.com/800x600/1E2B38/E67E22?text=Linear+Slot+Diffusers',
-        features_ar: [
-            'ÊÕãíã ãÎİí Ãæ ÙÇåÑ íãÊÒÌ ãÚ ÇáÓŞİ.',
-            'ÊÏİŞ åæÇÁ ŞÇÈá ááÊÚÏíá.',
-            'ãÊæİÑ ÈÃØæÇá ãÊÚÏÏÉ áÊäÇÓÈ ãÊØáÈÇÊ ÇáÊÕãíã.',
-            'ãÕäæÚÉ ãä ÇáÃáæãäíæã ÚÇáí ÇáÌæÏÉ.',
-            'ãŞÇæãÉ ááÊÂßá æÇáÕÏÃ.'
+        id: 'industrial-fans',
+        category: 'ventilation-systems',
+        name: 'Ù…Ø±Ø§ÙˆØ­ ØªÙ‡ÙˆÙŠØ© ØµÙ†Ø§Ø¹ÙŠØ©',
+        description: 'Ù…Ø±Ø§ÙˆØ­ Ù‚ÙˆÙŠØ© ÙˆÙ…ØªÙŠÙ†Ø© Ù…ØµÙ…Ù…Ø© Ù„ØªØ­Ù‚ÙŠÙ‚ ØªØ¯ÙÙ‚ Ù‡ÙˆØ§Ø¡ ÙØ¹Ø§Ù„ ÙÙŠ Ø§Ù„Ø¨ÙŠØ¦Ø§Øª Ø§Ù„ØµÙ†Ø§Ø¹ÙŠØ© Ø§Ù„Ù‚Ø§Ø³ÙŠØ©. ØªÙˆÙØ± ØªÙ‡ÙˆÙŠØ© Ù…Ù…ØªØ§Ø²Ø© ÙˆØªØ³Ø§Ø¹Ø¯ ÙÙŠ Ø§Ù„Ø­ÙØ§Ø¸ Ø¹Ù„Ù‰ Ø¬ÙˆØ¯Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ ÙˆØªÙ‚Ù„ÙŠÙ„ Ø¯Ø±Ø¬Ø§Øª Ø§Ù„Ø­Ø±Ø§Ø±Ø© ÙÙŠ Ø§Ù„Ù…ØµØ§Ù†Ø¹ ÙˆØ§Ù„Ù…Ø³ØªÙˆØ¯Ø¹Ø§Øª ÙˆØ§Ù„Ù…Ù†Ø´Ø¢Øª Ø§Ù„ÙƒØ¨ÙŠØ±Ø©.',
+        image: 'https://via.placeholder.com/800x600/F0F0F0/1E2B38?text=Industrial+Fans+Detail',
+        features: [
+            'Ù…Ø­Ø±ÙƒØ§Øª Ù‚ÙˆÙŠØ© ÙˆÙ…ÙˆØ«ÙˆÙ‚Ø©.',
+            'ØªØµÙ…ÙŠÙ… Ù…Ù‚Ø§ÙˆÙ… Ù„Ù„Ø¸Ø±ÙˆÙ Ø§Ù„Ù‚Ø§Ø³ÙŠØ©.',
+            'Ù‚Ø¯Ø±Ø© Ø¹Ø§Ù„ÙŠØ© Ø¹Ù„Ù‰ ØªØ­Ø±ÙŠÙƒ ÙƒÙ…ÙŠØ§Øª ÙƒØ¨ÙŠØ±Ø© Ù…Ù† Ø§Ù„Ù‡ÙˆØ§Ø¡.',
+            'Ø³Ù‡Ù„Ø© Ø§Ù„ØªØ±ÙƒÙŠØ¨ ÙˆØ§Ù„ØµÙŠØ§Ù†Ø©.',
+            'Ù…Ø³ØªÙˆÙŠØ§Øª Ø¶ÙˆØ¶Ø§Ø¡ Ù…Ù†Ø®ÙØ¶Ø© Ù†Ø³Ø¨ÙŠØ§Ù‹.'
         ],
-        features_en: [
-            'Concealed or exposed design that blends with the ceiling.',
-            'Adjustable airflow.',
-            'Available in multiple lengths to suit design requirements.',
-            'Made of high-quality aluminum.',
-            'Corrosion and rust resistant.'
-        ],
-        specs_ar: {
-            'ÇáãÇÏÉ': 'ÇáÃáæãäíæã ÇáãÈËæŞ',
-            'ÇáİÊÍÇÊ': '1-8 İÊÍÇÊ',
-            'ÇáÊÔØíÈ': 'ÏåÇä ÅáßÊÑæÓÊÇÊíßí (ÃáæÇä ÍÓÈ ÇáØáÈ)'
+        specs: {
+            'Ø§Ù„Ù†ÙˆØ¹': 'Ù…Ø­ÙˆØ±ÙŠØ©ØŒ Ø·Ø§Ø±Ø¯Ø© Ù…Ø±ÙƒØ²ÙŠØ©',
+            'Ø§Ù„Ù‚Ø¯Ø±Ø©': 'Ø­Ø³Ø¨ Ø§Ù„Ù…ÙˆØ¯ÙŠÙ„ (CFM)',
+            'Ù…ØµØ¯Ø± Ø§Ù„Ø·Ø§Ù‚Ø©': 'ÙƒÙ‡Ø±Ø¨Ø§Ø¦ÙŠ (3 ÙØ§Ø²)',
+            'Ø§Ù„Ù…Ø§Ø¯Ø©': 'Ø§Ù„ØµÙ„Ø¨ Ø§Ù„ÙƒØ±Ø¨ÙˆÙ†ÙŠ Ø§Ù„Ù…Ø·Ù„ÙŠØŒ Ø§Ù„Ø³ØªØ§Ù†Ù„Ø³ Ø³ØªÙŠÙ„'
         },
-        specs_en: {
-            'Material': 'Extruded Aluminum',
-            'Slots': '1-8 slots',
-            'Finish': 'Electrostatic paint (custom colors)'
-        },
-        downloadLink_ar: 'ESNAD air outlets submittal.pdf',
-        downloadLink_en: 'ESNAD air outlets submittal.pdf'
+        downloadLink: 'YOUR_DOWNLOAD_LINK_FOR_FANS_DATASHEET.pdf'
     },
     {
-        id: 'grilles',
-        category: 'air-outlets',
-        name_ar: 'ÌÑíáÇÊ',
-        name_en: 'Grilles',
-        description_ar: 'ÌÑíáÇÊ ÇáÊåæíÉ ãÕããÉ áÊæİíÑ ÊÏİŞ åæÇÁ İÚÇá ãÚ ãÙåÑ ÌĞÇÈ. ãÊæİÑÉ ÈÃÍÌÇã æÊÕÇãíã ãÎÊáİÉ áÊäÇÓÈ ÌãíÚ ÇáÊØÈíŞÇÊ¡ ãä ÇáÓßäíÉ Åáì ÇáÕäÇÚíÉ. ÊÖãä ÊæÒíÚğÇ ãËÇáíğÇ ááåæÇÁ æÊŞáíá ÇáÖæÖÇÁ.',
-        description_en: 'Ventilation grilles are designed to provide efficient airflow with an attractive appearance. Available in various sizes and designs to suit all applications, from residential to industrial. Ensures optimal air distribution and noise reduction.',
-        image: 'https://via.placeholder.com/800x600/1E2B38/E67E22?text=Grilles',
-        features_ar: [
-            'ãÊæİÑÉ ÈÊÕÇãíã ãÊÚÏÏÉ (ÚÇÏíÉ¡ ãÒÏæÌÉ ÇáÇäÍÑÇİ¡ ÈæÇÈÇÊ).',
-            'ÊÕäíÚ ãä ÇáÃáæãäíæã Ãæ ÇáÕáÈ.',
-            'ÓåæáÉ İí ÇáÊÑßíÈ æÇáÕíÇäÉ.',
-            'ãŞÇæãÉ ááÚæÇãá ÇáÌæíÉ æÇáÊÂßá.',
-            'ØáÇÁ ÈæáíÓÊÑ ãŞÇæã ááÎÏÔ.'
+        id: 'custom-ahu',
+        category: 'ahu-units',
+        name: 'ÙˆØ­Ø¯Ø§Øª Ù…Ù†Ø§ÙˆÙ„Ø© Ù‡ÙˆØ§Ø¡ (AHU) Ù…Ø®ØµØµØ©',
+        description: 'Ù†Ù‚Ø¯Ù… Ø­Ù„ÙˆÙ„ AHU Ù…ØµÙ…Ù…Ø© Ø®ØµÙŠØµÙ‹Ø§ Ù„ØªÙ„Ø¨ÙŠØ© Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„ÙØ±ÙŠØ¯Ø© Ù„Ù…Ø´Ø±ÙˆØ¹ÙƒØŒ Ù…Ø¹ Ø§Ù„Ø£Ø®Ø° ÙÙŠ Ø§Ù„Ø§Ø¹ØªØ¨Ø§Ø± Ø§Ù„Ù…Ø³Ø§Ø­Ø© Ø§Ù„Ù…ØªØ§Ø­Ø©ØŒ Ø§Ù„Ø³Ø¹Ø© Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©ØŒ ÙˆÙ…ÙˆØ§ØµÙØ§Øª Ø¬ÙˆØ¯Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡. Ù†Ø¶Ù…Ù† Ù„Ùƒ Ø£Ø¹Ù„Ù‰ Ù…Ø³ØªÙˆÙŠØ§Øª Ø§Ù„Ø£Ø¯Ø§Ø¡ ÙˆØ§Ù„ÙƒÙØ§Ø¡Ø©.',
+        image: 'https://via.placeholder.com/800x600/1E2B38/E67E22?text=Custom+AHU+Detail',
+        features: [
+            'ØªØµÙ…ÙŠÙ… Ù…Ø±Ù† ÙŠÙ†Ø§Ø³Ø¨ Ø£ÙŠ Ù…Ø³Ø§Ø­Ø© Ø£Ùˆ Ù…ØªØ·Ù„Ø¨Ø§Øª.',
+            'Ø¯Ù…Ø¬ Ø£Ø­Ø¯Ø« Ø§Ù„ØªÙ‚Ù†ÙŠØ§Øª ÙÙŠ Ø§Ù„ØªØ­ÙƒÙ… Ø¨Ø§Ù„Ø·Ø§Ù‚Ø©.',
+            'Ø®ÙŠØ§Ø±Ø§Øª Ù…ØªØ¹Ø¯Ø¯Ø© Ù„Ù„ÙÙ„ØªØ±Ø© ÙˆØ§Ù„ØªØ¹Ù‚ÙŠÙ….',
+            'Ø¯Ø¹Ù… ÙÙ†ÙŠ ÙƒØ§Ù…Ù„ Ù…Ù† Ø§Ù„ØªØµÙ…ÙŠÙ… Ø­ØªÙ‰ Ø§Ù„ØªØ´ØºÙŠÙ„.',
+            'ØªØ­Ù‚ÙŠÙ‚ Ø£Ù‚ØµÙ‰ Ø¯Ø±Ø¬Ø§Øª Ø§Ù„Ø±Ø§Ø­Ø© ÙˆØ§Ù„Ø¬ÙˆØ¯Ø© Ø§Ù„Ù‡ÙˆØ§Ø¦ÙŠØ©.'
         ],
-        features_en: [
-            'Available in multiple designs (single deflection, double deflection, egg crate).',
-            'Manufactured from aluminum or steel.',
-            'Easy to install and maintain.',
-            'Weather and corrosion resistant.',
-            'Scratch-resistant polyester coating.'
-        ],
-        specs_ar: {
-            'ÇáãÇÏÉ': 'ÇáÃáæãäíæã / ÇáÕáÈ',
-            'ÇáÃÍÌÇã': 'ÃÍÌÇã ŞíÇÓíÉ æãÎÕÕÉ',
-            'ÇáÊØÈíŞÇÊ': 'ãÎÇÑÌ åæÇÁ ÇáÊßííİ æÇáÊåæíÉ¡ ÌÑíáÇÊ ÇáÓÍÈ æÇáÑÇÌÚ.'
+        specs: {
+            'Ø§Ù„Ù…Ø±ÙˆÙ†Ø©': 'ØªØµÙ…ÙŠÙ… Ø­Ø³Ø¨ Ø§Ù„Ø·Ù„Ø¨',
+            'Ø§Ù„ØªØ®ØµÙŠØµ': 'Ø­Ø³Ø¨ Ù…ÙˆØ§ØµÙØ§Øª Ø§Ù„Ø¹Ù…ÙŠÙ„',
+            'Ø§Ù„ØªØ­ÙƒÙ…': 'Ø£Ù†Ø¸Ù…Ø© Ø°ÙƒÙŠØ© Ù…ØªÙ‚Ø¯Ù…Ø©',
+            'Ø§Ù„Ø´Ù‡Ø§Ø¯Ø§Øª': 'Ù…ØªÙˆØ§ÙÙ‚ Ù…Ø¹ Ø§Ù„Ù…Ø¹Ø§ÙŠÙŠØ± Ø§Ù„Ø¯ÙˆÙ„ÙŠØ©'
         },
-        specs_en: {
-            'Material': 'Aluminum / Steel',
-            'Sizes': 'Standard and custom sizes',
-            'Applications': 'HVAC air outlets, supply and return grilles.'
-        },
-        downloadLink_ar: 'ESNAD air outlets submittal.pdf',
-        downloadLink_en: 'ESNAD air outlets submittal.pdf'
-    },
-    {
-        id: 'dampers-volume-control',
-        category: 'dampers',
-        name_ar: 'ÏãÈÑÇÊ ÇáÊÍßã İí ÍÌã ÇáåæÇÁ (VCD)',
-        name_en: 'Volume Control Dampers (VCD)',
-        description_ar: 'ÊõÓÊÎÏã ÏãÈÑÇÊ ÇáÊÍßã İí ÍÌã ÇáåæÇÁ áÖÈØ æÊæÒíÚ ÊÏİŞ ÇáåæÇÁ ÏÇÎá äÙÇã ÇáÊåæíÉ æÇáÊßííİ ÈÏŞÉ. ÊÖãä ÇáÊÍßã ÇáÃãËá İí ÏÑÌÉ ÇáÍÑÇÑÉ æÌæÏÉ ÇáåæÇÁ¡ æÊÊæİÑ ÈÊÕãíãÇÊ íÏæíÉ Ãæ ÂáíÉ.',
-        description_en: 'Volume control dampers are used to precisely adjust and distribute airflow within HVAC systems. They ensure optimal temperature and air quality control, and are available in manual or automated designs.',
-        image: 'https://via.placeholder.com/800x600/1E2B38/E67E22?text=VCD',
-        features_ar: [
-            'ÊÍßã ÏŞíŞ İí ÊÏİŞ ÇáåæÇÁ.',
-            'ãÕäæÚÉ ãä ÇáÃáæãäíæã Ãæ ÇáÕáÈ ÇáãÌáİä.',
-            'ãÊæİÑÉ ÈÔİÑÇÊ ãÊæÇÒíÉ Ãæ ãÊÚÇßÓÉ.',
-            'ÓåáÉ ÇáÊÑßíÈ æÇáÖÈØ.',
-            'ãŞÇæãÉ ÚÇáíÉ ááÖÛØ æÇáÊÂßá.'
-        ],
-        features_en: [
-            'Precise control over airflow.',
-            'Made from aluminum or galvanized steel.',
-            'Available with parallel or opposed blades.',
-            'Easy to install and adjust.',
-            'High resistance to pressure and corrosion.'
-        ],
-        specs_ar: {
-            'ÇáãÇÏÉ': 'ÇáÃáæãäíæã / ÇáÕáÈ ÇáãÌáİä',
-            'ÇáÊÔÛíá': 'íÏæí / ßåÑÈÇÆí',
-            'ÇáÃÈÚÇÏ': 'ÃÍÌÇã ŞíÇÓíÉ æãÎÕÕÉ'
-        },
-        specs_en: {
-            'Material': 'Aluminum / Galvanized Steel',
-            'Operation': 'Manual / Electric',
-            'Dimensions': 'Standard and custom sizes'
-        },
-        downloadLink_ar: 'ESNAD air outlets submittal.pdf',
-        downloadLink_en: 'ESNAD air outlets submittal.pdf'
-    },
-    {
-        id: 'fire-dampers',
-        category: 'dampers',
-        name_ar: 'ÏãÈÑÇÊ ÇáÍÑíŞ (Fire Dampers)',
-        name_en: 'Fire Dampers',
-        description_ar: 'ÏãÈÑÇÊ ÇáÍÑíŞ åí ãßæäÇÊ ÃÓÇÓíÉ áÃäÙãÉ ÇáÓáÇãÉ ãä ÇáÍÑíŞ¡ æÊõÓÊÎÏã áÅÛáÇŞ ãÌÇÑí ÇáåæÇÁ ÊáŞÇÆíğÇ ÚäÏ ÇßÊÔÇİ ÍÑíŞ áãäÚ ÇäÊÔÇÑ ÇáÏÎÇä æÇáäÇÑ Èíä ãäÇØŞ ÇáãÈäì ÇáãÎÊáİÉ. ÊÊæÇİŞ ãÚ ãÚÇííÑ ÇáÓáÇãÉ ÇáÏæáíÉ.',
-        description_en: 'Fire dampers are essential components of fire safety systems, used to automatically close air ducts upon fire detection to prevent the spread of smoke and fire between different building areas. Complies with international safety standards.',
-        image: 'https://via.placeholder.com/800x600/1E2B38/E67E22?text=Fire+Dampers',
-        features_ar: [
-            'ÅÛáÇŞ ÊáŞÇÆí ÚäÏ ÇÑÊİÇÚ ÏÑÌÉ ÇáÍÑÇÑÉ.',
-            'ãÕäæÚÉ ãä ãæÇÏ ãŞÇæãÉ ááÍÑíŞ.',
-            'ãÊæİÑÉ ÈÊÕäíİÇÊ ãŞÇæãÉ ááÍÑíŞ ãÎÊáİÉ (ÓÇÚÇÊ).',
-            'ÓåæáÉ İí ÇáİÍÕ æÇáÕíÇäÉ.',
-            'ãÊæÇİŞÉ ãÚ ßæÏ ÇáÈäÇÁ æãÚÇííÑ ÇáÏİÇÚ ÇáãÏäí.'
-        ],
-        features_en: [
-            'Automatic closure upon temperature increase.',
-            'Made from fire-resistant materials.',
-            'Available in various fire resistance ratings (hours).',
-            'Easy to inspect and maintain.',
-            'Compliant with building codes and civil defense standards.'
-        ],
-        specs_ar: {
-            'ÇáãÇÏÉ': 'ÇáÕáÈ ÇáãÌáİä ÇáãŞÇæã ááÍÑíŞ',
-            'ÇáÊÔÛíá': 'ÕãÇã ÍÑÇÑí (Fusible Link)',
-            'ÇáÊÕäíİ': '1.5 ÓÇÚÉ / 3 ÓÇÚÇÊ'
-        },
-        specs_en: {
-            'Material': 'Fire-rated Galvanized Steel',
-            'Operation': 'Fusible Link',
-            'Rating': '1.5 hours / 3 hours'
-        },
-        downloadLink_ar: 'ESNAD air outlets submittal.pdf',
-        downloadLink_en: 'ESNAD air outlets submittal.pdf'
+        downloadLink: 'YOUR_DOWNLOAD_LINK_FOR_CUSTOM_AHU_DATASHEET.pdf'
     }
-    // íãßäß ÅÖÇİÉ ÇáãÒíÏ ãä ÇáãäÊÌÇÊ åäÇ ÈäİÓ ÇáÊäÓíŞ ËäÇÆí ÇááÛÉ
+    // Ø£Ø¶Ù Ø§Ù„Ù…Ø²ÙŠØ¯ Ù…Ù† Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª Ù‡Ù†Ø§ Ø¨Ù†ÙØ³ Ø§Ù„ØªÙ†Ø³ÙŠÙ‚
 ];
 
-// ÏÇáÉ áÊÛííÑ ÚäæÇä ÇáÕİÍÉ ÈäÇÁğ Úáì ÇáİÆÉ ÇáãÎÊÇÑÉ
-function updatePageTitle(category) {
-    const defaultTitle_ar = 'ãäÊÌÇÊäÇ - ÅÓäÇÏ';
-    const defaultTitle_en = 'Our Products - ESNAD';
-    let newTitle_ar = defaultTitle_ar;
-    let newTitle_en = defaultTitle_en;
-
-    const currentLang = document.documentElement.lang || 'ar'; // Get current language
-
-    if (category === 'air-ducts') {
-        newTitle_ar = 'ãÌÇÑí ÇáåæÇÁ - ÅÓäÇÏ';
-        newTitle_en = 'Air Ducts - ESNAD';
-    } else if (category === 'air-outlets') {
-        newTitle_ar = 'ãÎÇÑÌ ÇáåæÇÁ - ÅÓäÇÏ';
-        newTitle_en = 'Air Outlets - ESNAD';
-    } else if (category === 'dampers') {
-        newTitle_ar = 'ÇáÏãÈÑÇÊ - ÅÓäÇÏ';
-        newTitle_en = 'Dampers - ESNAD';
-    }
-
-    document.title = (currentLang === 'ar') ? newTitle_ar : newTitle_en;
-}
-
-// Mobile Menu Toggle (áÕİÍÇÊ ãÊÚÏÏÉ)
-const mobileMenu = document.getElementById('mobile-menu');
-const mainNavUl = document.querySelector('.main-nav ul');
-const dropdownLinks = document.querySelectorAll('.main-nav .dropdown > a'); // ÇáÑæÇÈØ ÇáÑÆíÓíÉ ááŞæÇÆã ÇáãäÓÏáÉ
-
-if (mobileMenu) {
-    mobileMenu.addEventListener('click', () => {
-        mainNavUl.classList.toggle('active');
-        mobileMenu.querySelector('i').classList.toggle('fa-bars');
-        mobileMenu.querySelector('i').classList.toggle('fa-times');
-        // ÅÛáÇŞ Ãí ŞÇÆãÉ ãäÓÏáÉ ãİÊæÍÉ ÚäÏ ÅÛáÇŞ ÇáŞÇÆãÉ ÇáÑÆíÓíÉ
-        if (!mainNavUl.classList.contains('active')) {
-            document.querySelectorAll('.main-nav .dropdown').forEach(d => d.classList.remove('active'));
-        }
-    });
-}
-
-// Toggle dropdown on click for mobile
-dropdownLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        // ÅĞÇ ßÇäÊ ÇáÔÇÔÉ ÕÛíÑÉ (ÃŞá ãä Ãæ ÊÓÇæí 992px)
-        if (window.innerWidth <= 992) {
-            e.preventDefault(); // ãäÚ Óáæß ÇáÑÇÈØ ÇáÇİÊÑÇÖí
-            const parentDropdown = link.closest('.dropdown');
-            parentDropdown.classList.toggle('active'); // ÊÈÏíá İÆÉ 'active' Úáì ÇáÚäÕÑ ÇáÃÈ (.dropdown)
-        }
-    });
-});
-
-
-// æÙíİÉ áÚÑÖ ÇáãäÊÌÇÊ İí ÇáÔÈßÉ
-function displayProducts(products, containerElement) {
-    containerElement.innerHTML = ''; // ãÓÍ Ãí ãÍÊæì ÓÇÈŞ
-
-    const currentLang = document.documentElement.lang || 'ar'; // Get current language
-
-    if (products.length === 0) {
-        containerElement.innerHTML = `<p class="no-products-message">${currentLang === 'ar' ? 'áÇ ÊæÌÏ ãäÊÌÇÊ áÚÑÖåÇ İí åĞå ÇáİÆÉ.' : 'No products to display in this category.'}</p>`;
-        return;
-    }
-
-    products.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.classList.add('product-card', 'animate__animated', 'animate__fadeInUp');
-
-        const imageUrl = product.image || `https://via.placeholder.com/300x200/1E2B38/E67E22?text=${encodeURIComponent(product[`name_${currentLang}`] || product.name_ar)}`;
-
-        // ÇÓÊÎÏÇã ÇáäÕæÕ ÈÇááÛÉ ÇáÍÇáíÉ
-        const productName = product[`name_${currentLang}`] || product.name_ar;
-        const productDescription = product[`description_${currentLang}`] || product.description_ar;
-        const downloadText = currentLang === 'ar' ? 'ÊÍãíá ÇáãæÇÕİÇÊ (PDF)' : 'Download Specs (PDF)';
-        const viewDetailsText = currentLang === 'ar' ? 'ÚÑÖ ÇáÊİÇÕíá' : 'View Details';
-
-        productCard.innerHTML = `
-            <img src="${imageUrl}" alt="${productName}">
-            <h3>${productName}</h3>
-            <p>${productDescription.substring(0, 100)}...</p>
-            <div class="card-buttons">
-                <a href="${product[`downloadLink_${currentLang}`] || product.downloadLink_ar}" target="_blank" class="button download-button">${downloadText}</a>
-                <a href="product-detail.html?id=${product.id}" class="button view-details-button">${viewDetailsText}</a>
-            </div>
-        `;
-        containerElement.appendChild(productCard);
-    });
-}
-
-// æÙíİÉ áÊÕİíÉ ÇáãäÊÌÇÊ æÚÑÖåÇ
-function filterAndDisplayProducts(selectedCategory) {
-    const productsGrid = document.getElementById('productsGrid');
-    if (!productsGrid) {
-        // åĞÇ íÚäí ÃääÇ áÓäÇ İí ÕİÍÉ products.html¡ ÑÈãÇ index.html
-        // æáßä ÏÇáÉ displayFeaturedProducts İí index.html áÏíåÇ ãäØŞåÇ ÇáÎÇÕ.
-        return;
-    }
-
-    const filteredProducts = selectedCategory === 'all'
-        ? productsData
-        : productsData.filter(product => product.category === selectedCategory);
-
-    displayProducts(filteredProducts, productsGrid);
-    updatePageTitle(selectedCategory); // ÊÍÏíË ÚäæÇä ÇáÕİÍÉ
-}
-
-// æÙíİÉ áÚÑÖ ÊİÇÕíá ÇáãäÊÌ ÈäÇÁğ Úáì ÇáÜ ID İí ÕİÍÉ product-detail.html (ÅĞÇ ßÇäÊ ãæÌæÏÉ)
-function displayProductDetail(productId) {
-    const product = productsData.find(p => p.id === productId);
-    const productDetailContainer = document.getElementById('productDetailContainer');
-
-    if (!product || !productDetailContainer) {
-        if (productDetailContainer) {
-            productDetailContainer.innerHTML = `<p class="error-message">${document.documentElement.lang === 'ar' ? 'ÚĞÑÇğ¡ áã íÊã ÇáÚËæÑ Úáì ÇáãäÊÌ ÇáãØáæÈ.' : 'Sorry, the requested product was not found.'}</p>`;
-        }
-        return;
-    }
-
-    const currentLang = document.documentElement.lang || 'ar'; // Get current language
-
-    // ÇÓÊÎÏÇã ÇáäÕæÕ ÈÇááÛÉ ÇáÍÇáíÉ áãáÁ ÇáÊİÇÕíá
-    const productName = product[`name_${currentLang}`] || product.name_ar;
-    const productDescription = product[`description_${currentLang}`] || product.description_ar;
-    const featuresList = (product[`features_${currentLang}`] || product.features_ar).map(feature => `<li>${feature}</li>`).join('');
-    const specsList = Object.entries(product[`specs_${currentLang}`] || product.specs_ar)
-        .map(([key, value]) => `<li><strong>${key}:</strong> ${value}</li>`)
-        .join('');
-
-    const downloadText = currentLang === 'ar' ? 'ÊÍãíá ÇáãæÇÕİÇÊ (PDF)' : 'Download Specs (PDF)';
-    const featuresTitle = currentLang === 'ar' ? 'ÇáãíÒÇÊ ÇáÑÆíÓíÉ' : 'Key Features';
-    const specsTitle = currentLang === 'ar' ? 'ÇáãæÇÕİÇÊ ÇáİäíÉ' : 'Technical Specifications';
-
-    document.title = productName + (currentLang === 'ar' ? ' - ÅÓäÇÏ' : ' - ESNAD'); // ÊÍÏíË ÚäæÇä ÇáãÊÕİÍ
-
-    productDetailContainer.innerHTML = `
-        <div class="product-detail-card animate__animated animate__fadeIn">
-            <img src="${product.image}" alt="${productName}" class="product-detail-image">
-            <h1 class="product-detail-title">${productName}</h1>
-            <p class="product-detail-description">${productDescription}</p>
-
-            <div class="product-features">
-                <h2>${featuresTitle}</h2>
-                <ul>${featuresList}</ul>
-            </div>
-
-            <div class="product-specs">
-                <h2>${specsTitle}</h2>
-                <ul>${specsList}</ul>
-            </div>
-
-            <a href="${product[`downloadLink_${currentLang}`] || product.downloadLink_ar}" target="_blank" class="button download-button-large">${downloadText}</a>
-        </div>
-    `;
-}
-
-// *** Translations Object - ßÇÆä ÇáÊÑÌãÇÊ (ãäŞæá ãä index.html áÊäÙíã ÃİÖá) ***
-// íÌÈ Ãä íßæä åĞÇ ÇáßÇÆä ãÊÇÍğÇ ÚÇáãíğÇ
-const translations = {
-    ar: {
-        homeTitle: "ÇáÑÆíÓíÉ - ÅÓäÇÏ",
-        productsTitle: "ãäÊÌÇÊäÇ - ÅÓäÇÏ",
-        navHome: "ÇáÑÆíÓíÉ",
-        navProducts: "ÇáãäÊÌÇÊ",
-        navAllProducts: "ßá ÇáãäÊÌÇÊ",
-        navAirDucts: "ãÌÇÑí ÇáåæÇÁ",
-        navAirOutlets: "ãÎÇÑÌ ÇáåæÇÁ",
-        navDampers: "ÇáÏãÈÑÇÊ",
-        navProjects: "ÇáãÔÇÑíÚ",
-        navServices: "ÇáÎÏãÇÊ",
-        navAbout: "Úä ÇáÔÑßÉ",
-        navContact: "ÇÊÕá ÈäÇ",
-        heroTitle: "Íáæá ãÈÊßÑÉ İí ãÌÇá ÇáÊßííİ æÇáÊåæíÉ",
-        heroText: "äŞÏã ÃÍÏË ÇáÊŞäíÇÊ æÇáÍáæá ÇáåäÏÓíÉ áÊáÈíÉ ÇÍÊíÇÌÇÊßã.",
-        heroButton: "ÇßÊÔİ ãÔÇÑíÚäÇ",
-        featuredProductsTitle: "ÃÍÏË ÇáãäÊÌÇÊ",
-        viewAllProductsButton: "ÚÑÖ ÌãíÚ ÇáãäÊÌÇÊ",
-        aboutUsTitle: "Úä ÔÑßÊäÇ",
-        aboutUsText: "äÍä ÔÑßÉ ÅÓäÇÏ¡ ÑæÇÏ İí ÊÕãíã æÊÕäíÚ æÊÑßíÈ ÃäÙãÉ ÇáÊßííİ æÇáÊåæíÉ ÚÇáíÉ ÇáÌæÏÉ. äáÊÒã ÈÊŞÏíã Íáæá ãÈÊßÑÉ æİÚÇáÉ ÊáÈí ÇÍÊíÇÌÇÊ ÚãáÇÆäÇ ÇáãÊÛíÑÉ¡ ãÚ ÇáÊÑßíÒ Úáì ÇáßİÇÁÉ ÇáÊÔÛíáíÉ æÇáÇÓÊÏÇãÉ ÇáÈíÆíÉ.",
-        readMoreButton: "ÇŞÑÃ ÇáãÒíÏ",
-        ourServicesTitle: "ÎÏãÇÊäÇ",
-        service1Title: "ÊÕãíã ÃäÙãÉ ÇáÊßííİ",
-        service1Text: "äŞÏã ÎÏãÇÊ ÊÕãíã ãÊßÇãáÉ áÃäÙãÉ ÇáÊßííİ ÇáãÑßÒí æÇáãŞÇÓã ÇáåæÇÆíÉ¡ áÖãÇä ÃİÖá ÃÏÇÁ æßİÇÁÉ.",
-        service2Title: "ÊÕäíÚ ãÌÇÑí ÇáåæÇÁ",
-        service2Text: "ãÊÎÕÕæä İí ÊÕäíÚ ãÌÇÑí ÇáåæÇÁ ÈÃÚáì ãÚÇííÑ ÇáÌæÏÉ ãä ÇáÕáÈ ÇáãÌáİä æÇáÓÊÇäáÓ ÓÊíá æÇáÃáæãäíæã.",
-        service3Title: "ÊÑßíÈ æÕíÇäÉ",
-        service3Text: "ÎÏãÇÊ ÊÑßíÈ æÕíÇäÉ ÇÍÊÑÇİíÉ áÌãíÚ ÃäÙãÉ ÇáÊåæíÉ æÇáÊßííİ áÖãÇä ÇáÊÔÛíá ÇáÃãËá.",
-        discoverServicesButton: "ÇßÊÔİ ÎÏãÇÊäÇ",
-        contactUsFooter: "ÊæÇÕá ãÚäÇ",
-        footerAddress: "ÈÇÓØæÓ ÇáŞäÇØÑ ÇáÎíÑíÉ¡ ÇáŞáíæÈíÉ¡ ãÕÑ",
-        quickLinksFooter: "ÑæÇÈØ ÓÑíÚÉ",
-        navHomeFooter: "ÇáÑÆíÓíÉ",
-        navServicesFooter: "ÇáÎÏãÇÊ",
-        navProjectsFooter: "ãÔÇÑíÚäÇ",
-        navAboutFooter: "Úä ÇáÔÑßÉ",
-        navContactFooter: "ÇÊÕá ÈäÇ",
-        ourLocationFooter: "ãæŞÚäÇ Úáì ÇáÎÑíØÉ",
-        copyrightFooter: "© 2025 ÅÓäÇÏ. ÌãíÚ ÇáÍŞæŞ ãÍİæÙÉ.",
-        filterAll: "Çáßá", // For products.html filter
-        filterAirDucts: "ãÌÇÑí ÇáåæÇÁ",
-        filterAirOutlets: "ãÎÇÑÌ ÇáåæÇÁ",
-        filterDampers: "ÇáÏãÈÑÇÊ",
-        viewDetailsButton: "ÚÑÖ ÇáÊİÇÕíá", // For featured products in index.html
-        productDetailTitle: "ÊİÇÕíá ÇáãäÊÌ", // For product-detail.html
-        downloadSpecs: "ÊÍãíá ÇáãæÇÕİÇÊ (PDF)", // For product-detail.html
-        keyFeatures: "ÇáãíÒÇÊ ÇáÑÆíÓíÉ", // For product-detail.html
-        technicalSpecs: "ÇáãæÇÕİÇÊ ÇáİäíÉ", // For product-detail.html
-        noProductsMessage: "áÇ ÊæÌÏ ãäÊÌÇÊ áÚÑÖåÇ İí åĞå ÇáİÆÉ.",
-        productNotFound: "ÚĞÑÇğ¡ áã íÊã ÇáÚËæÑ Úáì ÇáãäÊÌ ÇáãØáæÈ."
-    },
-    en: {
-        homeTitle: "Home - ESNAD",
-        productsTitle: "Our Products - ESNAD",
-        navHome: "Home",
-        navProducts: "Products",
-        navAllProducts: "All Products",
-        navAirDucts: "Air Ducts",
-        navAirOutlets: "Air Outlets",
-        navDampers: "Dampers",
-        navProjects: "Projects",
-        navServices: "Services",
-        navAbout: "About Us",
-        navContact: "Contact Us",
-        heroTitle: "Innovative HVAC Solutions",
-        heroText: "We offer the latest technologies and engineering solutions to meet your needs.",
-        heroButton: "Discover Our Projects",
-        featuredProductsTitle: "Latest Products",
-        viewAllProductsButton: "View All Products",
-        aboutUsTitle: "About Our Company",
-        aboutUsText: "We are ESNAD, leaders in designing, manufacturing, and installing high-quality HVAC systems. We are committed to providing innovative and effective solutions that meet our clients' evolving needs, focusing on operational efficiency and environmental sustainability.",
-        readMoreButton: "Read More",
-        ourServicesTitle: "Our Services",
-        service1Title: "HVAC System Design",
-        service1Text: "We offer integrated design services for central air conditioning and air handling units, ensuring optimal performance and efficiency.",
-        service2Title: "Ductwork Manufacturing",
-        service2Text: "Specialists in manufacturing high-quality ductwork from galvanized steel, stainless steel, and aluminum.",
-        service3Title: "Installation & Maintenance",
-        service3Text: "Professional installation and maintenance services for all ventilation and air conditioning systems to ensure optimal operation.",
-        discoverServicesButton: "Discover Our Services",
-        contactUsFooter: "Contact Us",
-        footerAddress: "Basos Al-Qanater Al-Khariia, Qalyubia, Egypt",
-        quickLinksFooter: "Quick Links",
-        navHomeFooter: "Home",
-        navServicesFooter: "Services",
-        navProjectsFooter: "Projects",
-        navAboutFooter: "About Us",
-        navContactFooter: "Contact Us",
-        ourLocationFooter: "Our Location on Map",
-        copyrightFooter: "© 2025 ESNAD. All Rights Reserved.",
-        filterAll: "All", // For products.html filter
-        filterAirDucts: "Air Ducts",
-        filterAirOutlets: "Air Outlets",
-        filterDampers: "Dampers",
-        viewDetailsButton: "View Details", // For featured products in index.html
-        productDetailTitle: "Product Details", // For product-detail.html
-        downloadSpecs: "Download Specs (PDF)", // For product-detail.html
-        keyFeatures: "Key Features", // For product-detail.html
-        technicalSpecs: "Technical Specifications", // For product-detail.html
-        noProductsMessage: "No products to display in this category.",
-        productNotFound: "Sorry, the requested product was not found."
-    }
-};
-
-let currentLang = localStorage.getItem('currentLang') || 'ar'; // Get lang from localStorage or default to 'ar'
-
-// Function to apply translations
-function applyTranslations() {
-    document.querySelectorAll('[data-lang-key]').forEach(element => {
-        const key = element.getAttribute('data-lang-key');
-        if (translations[currentLang] && translations[currentLang][key]) {
-            element.textContent = translations[currentLang][key];
-        }
-    });
-
-    // Update title
-    const titleElement = document.querySelector('title');
-    if (titleElement) {
-        const titleKey = titleElement.getAttribute('data-lang-key');
-        if (translations[currentLang] && translations[currentLang][titleKey]) {
-            titleElement.textContent = translations[currentLang][titleKey];
-        }
-    }
-
-
-    // Update HTML lang and dir attributes
-    document.documentElement.lang = currentLang;
-    document.documentElement.dir = (currentLang === 'ar') ? 'rtl' : 'ltr';
-
-    // Update text alignment for body (if not already handled by CSS based on dir)
-    // Removed specific body text-align as CSS rules handle it based on html[dir]
-
-    // Update active language button
-    document.getElementById('lang-ar')?.classList.remove('active');
-    document.getElementById('lang-en')?.classList.remove('active');
-    document.getElementById(`lang-${currentLang}`)?.classList.add('active');
-
-    // Re-display products or featured products to apply language-specific product names/descriptions
-    // This is called conditionally based on the page context
-    if (document.getElementById('featuredProductsGrid') && typeof displayFeaturedProducts !== 'undefined') {
-        displayFeaturedProducts(productsData, document.getElementById('featuredProductsGrid'));
-    }
-    if (document.getElementById('productsGrid') && typeof filterAndDisplayProducts !== 'undefined') {
-        // Re-apply current category filter to refresh product display with new language
-        const urlParams = new URLSearchParams(window.location.search);
-        const initialCategory = urlParams.get('category') || 'all';
-        filterAndDisplayProducts(initialCategory);
-    }
-    if (document.getElementById('productDetailContainer')) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const productId = urlParams.get('id');
-        if (productId) {
-            displayProductDetail(productId);
-        }
-    }
-}
-
-// Event listeners for language switcher buttons (null check for other pages)
-document.getElementById('lang-ar')?.addEventListener('click', () => {
-    currentLang = 'ar';
-    localStorage.setItem('currentLang', 'ar');
-    applyTranslations();
-});
-
-document.getElementById('lang-en')?.addEventListener('click', () => {
-    currentLang = 'en';
-    localStorage.setItem('currentLang', 'en');
-    applyTranslations();
-});
-
-
-// Initial page load logic
-document.addEventListener('DOMContentLoaded', () => {
-    applyTranslations(); // Apply initial translation on load
-
-    // For products.html
-    const productsGrid = document.getElementById('productsGrid');
-    if (productsGrid) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const initialCategory = urlParams.get('category') || 'all';
-
-        const filterTabs = document.querySelectorAll('.products-filter-tabs .filter-tab');
-        filterTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                filterTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                const category = tab.dataset.category;
-                filterAndDisplayProducts(category);
-                history.pushState(null, '', `products.html?category=${category}`); // Update URL without reload
-            });
-        });
-
-        // Activate the correct filter tab on initial load
-        const activeTab = document.querySelector(`.products-filter-tabs .filter-tab[data-category="${initialCategory}"]`);
-        if (activeTab) {
-            activeTab.classList.add('active');
-        } else {
-            // Default to 'all' if category not found or no category specified
-            document.querySelector('.products-filter-tabs .filter-tab[data-category="all"]')?.classList.add('active');
-        }
-        filterAndDisplayProducts(initialCategory); // Display products based on initial category
-    }
-
-    // For product-detail.html
-    const productDetailContainer = document.getElementById('productDetailContainer');
-    if (productDetailContainer) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const productId = urlParams.get('id');
-        displayProductDetail(productId);
-    }
-
-    // If on index.html, display featured products (already handled by applyTranslations in index.html, but good to ensure)
-    if (document.getElementById('featuredProductsGrid')) {
-        // This part is handled by the script tag directly in index.html after the translations object,
-        // but keeping it here for consistency if moved entirely to script.js
-        // displayFeaturedProducts(productsData, document.getElementById('featuredProductsGrid'));
-    }
-});
-
-// Helper function for index.html (if needed here, otherwise keep in index.html script tag)
-// This function needs to be global or passed if used in index.html directly
-function displayFeaturedProducts(products, containerElement) {
-    containerElement.innerHTML = ''; // Clear any previous content
-
-    const productsToShow = products.slice(0, 3); // Display only the first 3 products
-    const currentLang = document.documentElement.lang || 'ar'; // Get current language
-
-    productsToShow.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.classList.add('product-card', 'animate__animated', 'animate__fadeInUp');
-
-        const imageUrl = product.image || `https://via.placeholder.com/300x200/1E2B38/E67E22?text=${encodeURIComponent(product[`name_${currentLang}`] || product.name_ar)}`;
-        const productName = product[`name_${currentLang}`] || product.name_ar;
-        const productDescription = product[`description_${currentLang}`] || product.description_ar;
-        const viewDetailsText = translations[currentLang]?.viewDetailsButton || 'ÚÑÖ ÇáÊİÇÕíá';
-
-        productCard.innerHTML = `
-            <img src="${imageUrl}" alt="${productName}">
-            <h3>${productName}</h3>
-            <p>${productDescription.substring(0, 100)}...</p>
-            <a href="product-detail.html?id=${product.id}" class="view-details">${viewDetailsText}</a>
-        `;
-        containerElement.appendChild(productCard);
-    });
-}
-
-
-// Placeholder for projectsData (if needed on projects.html)
-// For projects.html, similar bilingual structure will be needed.
+// Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹
+// Ù‡Ù†Ø§ ÙŠÙ…ÙƒÙ†Ùƒ Ø¥Ø¶Ø§ÙØ© Ø£Ùˆ ØªØ¹Ø¯ÙŠÙ„ Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ Ø§Ù„Ø®Ø§ØµØ© Ø¨Ùƒ.
+// ØªØ£ÙƒØ¯ Ù…Ù† Ø£Ù† 'id' Ù„ÙƒÙ„ Ù…Ø´Ø±ÙˆØ¹ ÙØ±ÙŠØ¯.
 const projectsData = [
     {
-        id: 'project1',
-        category: 'commercial',
-        name_ar: 'ãÔÑæÚ ÈÑÌ ÇáÃÚãÇá ÇáÍÏíË',
-        name_en: 'Modern Business Tower Project',
-        image: 'https://via.placeholder.com/800x600/E67E22/1E2B38?text=Project+1',
-        description_ar: 'ÊÕãíã æÊÑßíÈ ÃäÙãÉ Êßííİ æÊåæíÉ ãÊßÇãáÉ áÈÑÌ ÊÌÇÑí ãÊÚÏÏ ÇáØæÇÈŞ¡ íÖã ãßÇÊÈ æãÓÇÍÇÊ ÊÌÒÆÉ.',
-        description_en: 'Design and installation of integrated HVAC systems for a multi-story commercial tower, including offices and retail spaces.'
-    },
-    {
-        id: 'project2',
-        category: 'residential',
-        name_ar: 'ãÌãÚ İíáÇÊ ÓßäíÉ İÇÎÑÉ',
-        name_en: 'Luxury Residential Villas Complex',
-        image: 'https://via.placeholder.com/800x600/E67E22/1E2B38?text=Project+2',
-        description_ar: 'ÊäİíĞ Íáæá Êßííİ ãÑßÒíÉ æÃäÙãÉ ãÌÇÑí åæÇÁ ãÎÕÕÉ áãÌãÚ Óßäí íÖã 50 İíáÇ İÇÎÑÉ¡ ãÚ ÇáÊÑßíÒ Úáì ßİÇÁÉ ÇáØÇŞÉ æÇáÑÇÍÉ.',
-        description_en: 'Implementation of central air conditioning solutions and custom ductwork systems for a residential complex of 50 luxury villas, with a focus on energy efficiency and comfort.'
-    },
-    {
-        id: 'project3',
+        id: 'food-factory-riyadh',
         category: 'industrial',
-        name_ar: 'ÊÍÏíË ãÕäÚ ááãæÇÏ ÇáÛĞÇÆíÉ',
-        name_en: 'Food Processing Plant Upgrade',
-        image: 'https://via.placeholder.com/800x600/E67E22/1E2B38?text=Project+3',
-        description_ar: 'ÊÌÏíÏ ÔÇãá áÃäÙãÉ ÇáÊåæíÉ æÇáÊÍßã İí ÇáãäÇÎ áãÕäÚ ßÈíÑ ááãæÇÏ ÇáÛĞÇÆíÉ¡ ÈãÇ íÖãä ÊáÈíÉ ÃÚáì ãÚÇííÑ ÇáäÙÇİÉ æÇáÌæÏÉ.',
-        description_en: 'Comprehensive renovation of ventilation and climate control systems for a large food processing plant, ensuring compliance with the highest hygiene and quality standards.'
+        name: 'Ø¬Ø§Ù…Ø¹Ø© Ø§Ù„Ø¬Ù„Ø§Ù„Ø©',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlFzxnXA-hW2EaMkrRzszdyqvI1Tve0EwiQFxyRafUVChaPizRr8ehJonKMlIQ_emmdcc&usqp=CAU',
+        details: {
+            sector: 'ØµÙ†Ø§Ø¹ÙŠ',
+            completionDate: '2023-08-15',
+            location: 'Ø§Ù„Ø±ÙŠØ§Ø¶ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©',
+            servicesProvided: 'ØªØµÙ…ÙŠÙ… ÙˆØªÙ†ÙÙŠØ° Ø£Ù†Ø¸Ù…Ø© HVACØŒ Ù…Ø¬Ø§Ø±ÙŠ Ø§Ù„Ù‡ÙˆØ§Ø¡ØŒ ÙˆØ­Ø¯Ø§Øª AHU Ù…Ø®ØµØµØ©.',
+            challenge: 'ØªØ­Ù‚ÙŠÙ‚ Ù…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„Ù†Ø¸Ø§ÙØ© Ø§Ù„ØµØ§Ø±Ù…Ø© ÙˆØ§Ù„ØªØ­ÙƒÙ… Ø§Ù„Ø¯Ù‚ÙŠÙ‚ ÙÙŠ Ø§Ù„Ù…Ù†Ø§Ø® Ù„Ù…Ø±Ø§ÙÙ‚ ØªØµÙ†ÙŠØ¹ Ø§Ù„Ø£ØºØ°ÙŠØ©.',
+            solution: 'ØªØ±ÙƒÙŠØ¨ ÙˆØ­Ø¯Ø§Øª Ù…Ù†Ø§ÙˆÙ„Ø© Ù‡ÙˆØ§Ø¡ (AHU) Ù…Ø²ÙˆØ¯Ø© Ø¨ÙÙ„Ø§ØªØ± HEPAØŒ ÙˆØ£Ù†Ø¸Ù…Ø© ØªÙ‡ÙˆÙŠØ© Ø¨Ø¶ØºØ· Ø¥ÙŠØ¬Ø§Ø¨ÙŠØŒ Ø¨Ø§Ù„Ø¥Ø¶Ø§ÙØ© Ø¥Ù„Ù‰ Ù…Ø¬Ø§Ø±ÙŠ Ù‡ÙˆØ§Ø¡ Ù…Ø¹Ø²ÙˆÙ„Ø© Ø¨Ø§Ù„ÙƒØ§Ù…Ù„.'
+        }
     },
     {
-        id: 'project4',
+        id: 'commercial-tower-jeddah',
         category: 'commercial',
-        name_ar: 'ãÑßÒ ÊÓæŞ ÇáÌæåÑÉ',
-        name_en: 'Al-Jauhara Shopping Mall',
-        image: 'https://via.placeholder.com/800x600/E67E22/1E2B38?text=Project+4',
-        description_ar: 'ÊÑßíÈ ÃäÙãÉ Êßííİ ãÑßÒí ãÊØæÑÉ áãæá ÊÌÇÑí ÖÎã¡ ãÚ ãÑÇÚÇÉ ÇáãäÇØŞ ÇáãÎÊáİÉ ãËá ÇáãÊÇÌÑ¡ ÇáãØÇÚã¡ æÏæÑ ÇáÓíäãÇ.',
-        description_en: 'Installation of advanced central air conditioning systems for a massive shopping mall, considering different areas such as shops, restaurants, and cinemas.'
+        name: 'MIVIDA',
+        description: 'ØªÙˆØ±ÙŠØ¯ ÙˆØªØ±ÙƒÙŠØ¨ Ø£Ù†Ø¸Ù…Ø© ØªÙƒÙŠÙŠÙ Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù…Ø±ÙƒØ²ÙŠØ© Ù„Ù…Ø¨Ù†Ù‰ Ø¨Ø±Ø¬ ØªØ¬Ø§Ø±ÙŠ Ù…ØªØ¹Ø¯Ø¯ Ø§Ù„Ø·ÙˆØ§Ø¨Ù‚ ÙÙŠ Ø¬Ø¯Ø©ØŒ Ù„Ø¶Ù…Ø§Ù† Ø±Ø§Ø­Ø© Ø§Ù„Ù…Ø³ØªØ£Ø¬Ø±ÙŠÙ† ÙˆÙƒÙØ§Ø¡Ø© Ø§Ø³ØªÙ‡Ù„Ø§Ùƒ Ø§Ù„Ø·Ø§Ù‚Ø©.',
+        image: 'https://castle-ei.com/wp-content/uploads/2024/12/mivida-logo-1024x684-1.jpg',
+        details: {
+            sector: 'ØªØ¬Ø§Ø±ÙŠ',
+            completionDate: '2024-02-28',
+            location: 'Ø¬Ø¯Ø©ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©',
+            servicesProvided: 'ØªÙˆØ±ÙŠØ¯ ÙˆØªØ±ÙƒÙŠØ¨ ÙˆØ­Ø¯Ø§Øª Ø§Ù„ØªØ¨Ø±ÙŠØ¯ (Chillers)ØŒ ÙˆØ­Ø¯Ø§Øª Ù…Ø¹Ø§Ù„Ø¬Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ (AHU)ØŒ Ù…Ø¬Ø§Ø±ÙŠ Ø§Ù„Ù‡ÙˆØ§Ø¡ØŒ ÙˆØ£Ù†Ø¸Ù…Ø© Ø§Ù„ØªØ­ÙƒÙ….',
+            challenge: 'ØªÙˆÙÙŠØ± Ø­Ù„ ØªØ¨Ø±ÙŠØ¯ ÙØ¹Ø§Ù„ Ù„Ø¨Ø±Ø¬ Ø´Ø§Ù‡Ù‚ Ù…Ø¹ Ù…Ø±Ø§Ø¹Ø§Ø© Ù…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„ØªØµÙ…ÙŠÙ… Ø§Ù„Ù…Ø¹Ù…Ø§Ø±ÙŠ ÙˆØ§Ù„Ø¬Ù…Ø§Ù„ÙŠØ©.',
+            solution: 'ØªÙ†ÙÙŠØ° Ù†Ø¸Ø§Ù… ØªÙƒÙŠÙŠÙ Ù…Ø±ÙƒØ²ÙŠ Ù…ØªÙƒØ§Ù…Ù„ Ù…Ø¹ Ø£Ù†Ø¸Ù…Ø© ØªØ­ÙƒÙ… Ø°ÙƒÙŠØ© Ù„ØªÙˆÙÙŠØ± Ø§Ø³ØªÙ‡Ù„Ø§Ùƒ Ø§Ù„Ø·Ø§Ù‚Ø©ØŒ ÙˆØªØµÙ…ÙŠÙ… Ù…Ø¬Ø§Ø±ÙŠ Ù‡ÙˆØ§Ø¡ Ù…Ø¯Ù…Ø¬Ø© ØªØªÙ†Ø§Ø³Ø¨ Ù…Ø¹ Ø§Ù„ØªØµÙ…ÙŠÙ… Ø§Ù„Ø¯Ø§Ø®Ù„ÙŠ.'
+        }
     },
     {
-        id: 'project5',
-        category: 'hospital',
-        name_ar: 'ãÓÊÔİì ÇáÃãá ÇáÌÏíÏ',
-        name_en: 'New Al-Amal Hospital',
-        image: 'https://via.placeholder.com/800x600/E67E22/1E2B38?text=Project+5',
-        description_ar: 'ÊÕãíã æÊæÑíÏ æÊÑßíÈ ÃäÙãÉ HVAC ÎÇÕÉ ÈÇáãÓÊÔİíÇÊ¡ ÈãÇ İí Ğáß ÛÑİ ÇáÚãáíÇÊ ææÍÏÇÊ ÇáÚäÇíÉ ÇáãÑßÒÉ¡ ãÚ İáÇÊÑ åæÇÁ ÚÇáíÉ ÇáßİÇÁÉ.',
-        description_en: 'Design, supply, and installation of specialized hospital HVAC systems, including operating rooms and intensive care units, with high-efficiency air filters.'
-    }
+        id: 'hospital-project-dammam',
+        category: 'f',
+        name:'R5',
+        description: 'ØªÙ†ÙÙŠØ° Ø£Ù†Ø¸Ù…Ø© ØªÙ‡ÙˆÙŠØ© ÙˆØªÙƒÙŠÙŠÙ Ù…ØªØ®ØµØµØ© Ù„Ù…Ø³ØªØ´ÙÙ‰ Ø¬Ø¯ÙŠØ¯ ÙÙŠ Ø§Ù„Ø¯Ù…Ø§Ù…ØŒ Ù…Ø¹ Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø§Ù„ØµØ§Ø±Ù… Ø¨Ù…Ø¹Ø§ÙŠÙŠØ± Ø§Ù„Ø¬ÙˆØ¯Ø© ÙˆØ§Ù„Ù†Ø¸Ø§ÙØ© Ù„Ù„Ù…Ø±Ø§ÙÙ‚ Ø§Ù„ØµØ­ÙŠØ©.',
+        image: 'https://i.ibb.co/NzgvDWn/R5.webp',
+        details: {
+            sector: 'ØµØ­ÙŠ',
+            completionDate: '2023-11-01',
+            location: 'Ø§Ù„Ø¯Ù…Ø§Ù…ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©',
+            servicesProvided: 'ØªØµÙ…ÙŠÙ… ÙˆØªÙ†ÙÙŠØ° Ø£Ù†Ø¸Ù…Ø© HVAC Ù„ØºØ±Ù Ø§Ù„Ø¹Ù…Ù„ÙŠØ§Øª ÙˆØ§Ù„Ø¹Ù†Ø§ÙŠØ© Ø§Ù„Ù…Ø±ÙƒØ²Ø© ÙˆØ§Ù„Ù…Ø®ØªØ¨Ø±Ø§ØªØŒ ØªØ±ÙƒÙŠØ¨ ÙÙ„Ø§ØªØ± HEPAØŒ ØºØ±Ù Ø¶ØºØ· Ø¥ÙŠØ¬Ø§Ø¨ÙŠ ÙˆØ³Ù„Ø¨ÙŠ.',
+            challenge: 'Ø¶Ù…Ø§Ù† Ø¨ÙŠØ¦Ø© Ù…Ø¹Ù‚Ù…Ø© ÙˆØ®Ø§Ù„ÙŠØ© Ù…Ù† Ø§Ù„Ù…Ù„ÙˆØ«Ø§ØªØŒ ÙˆØ§Ù„ØªØ­ÙƒÙ… ÙÙŠ Ø§Ù†ØªØ´Ø§Ø± Ø§Ù„Ø¹Ø¯ÙˆÙ‰ Ø¯Ø§Ø®Ù„ Ø§Ù„Ù…Ø³ØªØ´ÙÙ‰.',
+            solution: 'ØªØ±ÙƒÙŠØ¨ ÙˆØ­Ø¯Ø§Øª AHU Ù…ØªØ®ØµØµØ© Ù„Ù„Ù…Ø³ØªØ´ÙÙŠØ§ØªØŒ ÙˆØªØ·Ø¨ÙŠÙ‚ Ù†Ø¸Ø§Ù… ØµØ§Ø±Ù… Ù„ØªØµØ±ÙŠÙ Ø§Ù„Ù‡ÙˆØ§Ø¡ ÙˆÙÙ„ØªØ±ØªÙ‡ØŒ Ù…Ø¹ Ø§Ø³ØªØ®Ø¯Ø§Ù… Ù…Ø¬Ø§Ø±ÙŠ Ù‡ÙˆØ§Ø¡ Ù…Ù‚Ø§ÙˆÙ…Ø© Ù„Ù„Ø¨ÙƒØªÙŠØ±ÙŠØ§.'
+        }
+    },
+    {
+        id: 'shopping-mall-riyadh',
+        category: 'commercial',
+        name: 'Ù…Ø¬Ù…Ø¹ ØªØ³ÙˆÙ‚ (Ø§Ù„Ø±ÙŠØ§Ø¶)',
+        description: 'ØªØ¬Ù‡ÙŠØ² Ù…Ø¬Ù…Ø¹ ØªØ³ÙˆÙ‚ Ø¶Ø®Ù… ÙÙŠ Ø§Ù„Ø±ÙŠØ§Ø¶ Ø¨Ø£Ù†Ø¸Ù…Ø© ØªÙ‡ÙˆÙŠØ© ÙˆØªÙƒÙŠÙŠÙ Ù…Ø±ÙƒØ²ÙŠØ©ØŒ Ù„ØªÙˆÙÙŠØ± Ø¨ÙŠØ¦Ø© Ù…Ø±ÙŠØ­Ø© Ù„Ù„Ù…ØªØ³ÙˆÙ‚ÙŠÙ† ÙˆØ§Ù„Ø²ÙˆØ§Ø± Ø·ÙˆØ§Ù„ Ø§Ù„Ø¹Ø§Ù….',
+        image: 'https://via.placeholder.com/600x400/7F8C8D/BDC3C7?text=Commercial+Project+2',
+        details: {
+            sector: 'ØªØ¬Ø§Ø±ÙŠ',
+            completionDate: '2024-06-10',
+            location: 'Ø§Ù„Ø±ÙŠØ§Ø¶ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©',
+            servicesProvided: 'ØªÙˆØ±ÙŠØ¯ ÙˆØªØ±ÙƒÙŠØ¨ ÙˆØ­Ø¯Ø§Øª Ù…Ù†Ø§ÙˆÙ„Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ ÙƒØ¨ÙŠØ±Ø© Ø§Ù„Ø³Ø¹Ø©ØŒ Ø£Ù†Ø¸Ù…Ø© ØªÙ‡ÙˆÙŠØ© Ù…ÙˆØ§Ù‚Ù Ø§Ù„Ø³ÙŠØ§Ø±Ø§ØªØŒ Ø£Ù†Ø¸Ù…Ø© Ø§Ù„ØªØ­ÙƒÙ… Ø§Ù„Ø°ÙƒÙŠ ÙÙŠ Ø§Ù„Ù…Ù†Ø§Ø®.',
+            challenge: 'ØªÙƒÙŠÙŠÙ Ù…Ø³Ø§Ø­Ø§Øª ÙˆØ§Ø³Ø¹Ø© ÙˆÙ…ØªØ¹Ø¯Ø¯Ø© Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…Ø§Øª Ù…Ø¹ ØªØ¯ÙÙ‚ ÙƒØ¨ÙŠØ± Ù„Ù„Ø²ÙˆØ§Ø±ØŒ ÙˆØªØ­Ù‚ÙŠÙ‚ ÙƒÙØ§Ø¡Ø© Ø¹Ø§Ù„ÙŠØ© ÙÙŠ Ø§Ø³ØªÙ‡Ù„Ø§Ùƒ Ø§Ù„Ø·Ø§Ù‚Ø©.',
+            solution: 'ØªØ±ÙƒÙŠØ¨ Ø£Ù†Ø¸Ù…Ø© AHU Ùˆ FCU Ù…Ø¯Ù…Ø¬Ø©ØŒ ÙˆØ§Ø³ØªØ®Ø¯Ø§Ù… Ù…Ø¬Ø§Ø±ÙŠ Ù‡ÙˆØ§Ø¡ Ù…Ø±Ù†Ø© ÙˆØ¹Ø§Ù„ÙŠØ© Ø§Ù„Ø£Ø¯Ø§Ø¡ØŒ Ù…Ø¹ Ù†Ø¸Ø§Ù… BMS Ù…ØªÙ‚Ø¯Ù… Ù„Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ø·Ø§Ù‚Ø© ÙˆØ§Ù„Ø±Ø§Ø­Ø©.'
+        }
+    },
+    {
+        id: 'pharmaceutical-plant-jubail',
+        category: 'industrial',
+        name: 'ÙÙ†Ø¯Ù‚ Ø§Ù„Ø¬Ù„Ø§Ù„Ø©',
+        description: 'Ù…Ø´Ø±ÙˆØ¹ Ù…ØªÙƒØ§Ù…Ù„ Ù„ØªØµÙ…ÙŠÙ… ÙˆØªÙ†ÙÙŠØ° Ø£Ù†Ø¸Ù…Ø© ØªÙƒÙŠÙŠÙ Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù†Ø¸ÙŠÙ (Clean Room HVAC) Ù„Ù…ØµÙ†Ø¹ Ø£Ø¯ÙˆÙŠØ© ÙÙŠ Ø§Ù„Ø¬Ø¨ÙŠÙ„ØŒ ÙˆÙÙ‚Ù‹Ø§ Ù„Ù„Ù…Ø¹Ø§ÙŠÙŠØ± Ø§Ù„Ø¯ÙˆÙ„ÙŠØ© GMP.',
+        image: 'https://i.ibb.co/C5CLbsdj/tolip-resort-el-galala.jpg',
+        details: {
+            sector: 'ØµÙ†Ø§Ø¹ÙŠ',
+            completionDate: '2025-01-20',
+            location: 'Ø§Ù„Ø¬Ø¨ÙŠÙ„ Ø§Ù„ØµÙ†Ø§Ø¹ÙŠØ©ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©',
+            servicesProvided: 'ØªØµÙ…ÙŠÙ… ÙˆØ¨Ù†Ø§Ø¡ ØºØ±Ù Ù†Ø¸ÙŠÙØ© (Clean Rooms)ØŒ Ø£Ù†Ø¸Ù…Ø© HVAC Ù…Ø®ØµØµØ© Ù„ØºØ±Ù Ø§Ù„Ø¶ØºØ·ØŒ ÙÙ„Ø§ØªØ± HEPA Ùˆ ULPAØŒ Ø£Ù†Ø¸Ù…Ø© Ù…Ø±Ø§Ù‚Ø¨Ø© Ø§Ù„Ø¬ÙˆØ¯Ø©.',
+            challenge: 'Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø£Ù‚ØµÙ‰ Ø¯Ø±Ø¬Ø§Øª Ø§Ù„Ù†Ø¸Ø§ÙØ© ÙˆØ§Ù„ØªØ¹Ù‚ÙŠÙ… ÙˆÙ…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„Ø­Ø±Ø¬Ø© ÙÙŠ ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø£Ø¯ÙˆÙŠØ©.',
+            solution: 'ØªØ·Ø¨ÙŠÙ‚ Ø£Ø­Ø¯Ø« ØªÙ‚Ù†ÙŠØ§Øª Ø§Ù„ØºØ±Ù Ø§Ù„Ù†Ø¸ÙŠÙØ©ØŒ ÙˆØªÙˆÙÙŠØ± ÙˆØ­Ø¯Ø§Øª Ù…Ø¹Ø§Ù„Ø¬Ø© Ù‡ÙˆØ§Ø¡ Ù…ØªØ®ØµØµØ© Ù…Ø¹ Ø£Ù†Ø¸Ù…Ø© ØªØ±Ø´ÙŠØ­ Ù…ØªÙ‚Ø¯Ù…Ø© Ù„Ø¶Ù…Ø§Ù† Ø¬ÙˆØ¯Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©.'
+        }
+    },
+     {
+        id: 'pharmaceutical-plant-jubail',
+        category: 'industrial',
+        name: 'Ø¬Ø§Ù…Ø¹Ø©Ù…ØµØ±',
+        description: 'Ù…Ø´Ø±ÙˆØ¹ Ù…ØªÙƒØ§Ù…Ù„ Ù„ØªØµÙ…ÙŠÙ… ÙˆØªÙ†ÙÙŠØ° Ø£Ù†Ø¸Ù…Ø© ØªÙƒÙŠÙŠÙ Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù†Ø¸ÙŠÙ (Clean Room HVAC) Ù„Ù…ØµÙ†Ø¹ Ø£Ø¯ÙˆÙŠØ© ÙÙŠ Ø§Ù„Ø¬Ø¨ÙŠÙ„ØŒ ÙˆÙÙ‚Ù‹Ø§ Ù„Ù„Ù…Ø¹Ø§ÙŠÙŠØ± Ø§Ù„Ø¯ÙˆÙ„ÙŠØ© GMP.',
+        image: 'https://i.ibb.co/8GpQ969/download.jpg',
+        details: {
+            sector: 'ØµÙ†Ø§Ø¹ÙŠ',
+            completionDate: '2025-01-20',
+            location: 'Ø§Ù„Ø¬Ø¨ÙŠÙ„ Ø§Ù„ØµÙ†Ø§Ø¹ÙŠØ©ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©',
+            servicesProvided: 'ØªØµÙ…ÙŠÙ… ÙˆØ¨Ù†Ø§Ø¡ ØºØ±Ù Ù†Ø¸ÙŠÙØ© (Clean Rooms)ØŒ Ø£Ù†Ø¸Ù…Ø© HVAC Ù…Ø®ØµØµØ© Ù„ØºØ±Ù Ø§Ù„Ø¶ØºØ·ØŒ ÙÙ„Ø§ØªØ± HEPA Ùˆ ULPAØŒ Ø£Ù†Ø¸Ù…Ø© Ù…Ø±Ø§Ù‚Ø¨Ø© Ø§Ù„Ø¬ÙˆØ¯Ø©.',
+            challenge: 'Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø£Ù‚ØµÙ‰ Ø¯Ø±Ø¬Ø§Øª Ø§Ù„Ù†Ø¸Ø§ÙØ© ÙˆØ§Ù„ØªØ¹Ù‚ÙŠÙ… ÙˆÙ…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„Ø­Ø±Ø¬Ø© ÙÙŠ ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø£Ø¯ÙˆÙŠØ©.',
+            solution: 'ØªØ·Ø¨ÙŠÙ‚ Ø£Ø­Ø¯Ø« ØªÙ‚Ù†ÙŠØ§Øª Ø§Ù„ØºØ±Ù Ø§Ù„Ù†Ø¸ÙŠÙØ©ØŒ ÙˆØªÙˆÙÙŠØ± ÙˆØ­Ø¯Ø§Øª Ù…Ø¹Ø§Ù„Ø¬Ø© Ù‡ÙˆØ§Ø¡ Ù…ØªØ®ØµØµØ© Ù…Ø¹ Ø£Ù†Ø¸Ù…Ø© ØªØ±Ø´ÙŠØ­ Ù…ØªÙ‚Ø¯Ù…Ø© Ù„Ø¶Ù…Ø§Ù† Ø¬ÙˆØ¯Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©.'
+        }
+    },
+    {
+        id: 'pharmaceutical-plant-jubail',
+        category: 'industrial',
+        name: 'Ù…ÙƒØªØ¨Ø© Ø§Ù„Ø§Ø³ÙƒÙ†Ø¯Ø±ÙŠÙ‡',
+        description: 'Ù…Ø´Ø±ÙˆØ¹ Ù…ØªÙƒØ§Ù…Ù„ Ù„ØªØµÙ…ÙŠÙ… ÙˆØªÙ†ÙÙŠØ° Ø£Ù†Ø¸Ù…Ø© ØªÙƒÙŠÙŠÙ Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù†Ø¸ÙŠÙ (Clean Room HVAC) Ù„Ù…ØµÙ†Ø¹ Ø£Ø¯ÙˆÙŠØ© ÙÙŠ Ø§Ù„Ø¬Ø¨ÙŠÙ„ØŒ ÙˆÙÙ‚Ù‹Ø§ Ù„Ù„Ù…Ø¹Ø§ÙŠÙŠØ± Ø§Ù„Ø¯ÙˆÙ„ÙŠØ© GMP.',
+        image: 'https://i.ibb.co/mV7135zS/UREWIEUROW.jpg',
+        details: {
+            sector: 'ØµÙ†Ø§Ø¹ÙŠ',
+            completionDate: '2025-01-20',
+            location: 'Ø§Ù„Ø¬Ø¨ÙŠÙ„ Ø§Ù„ØµÙ†Ø§Ø¹ÙŠØ©ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©',
+            servicesProvided: 'ØªØµÙ…ÙŠÙ… ÙˆØ¨Ù†Ø§Ø¡ ØºØ±Ù Ù†Ø¸ÙŠÙØ© (Clean Rooms)ØŒ Ø£Ù†Ø¸Ù…Ø© HVAC Ù…Ø®ØµØµØ© Ù„ØºØ±Ù Ø§Ù„Ø¶ØºØ·ØŒ ÙÙ„Ø§ØªØ± HEPA Ùˆ ULPAØŒ Ø£Ù†Ø¸Ù…Ø© Ù…Ø±Ø§Ù‚Ø¨Ø© Ø§Ù„Ø¬ÙˆØ¯Ø©.',
+            challenge: 'Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø£Ù‚ØµÙ‰ Ø¯Ø±Ø¬Ø§Øª Ø§Ù„Ù†Ø¸Ø§ÙØ© ÙˆØ§Ù„ØªØ¹Ù‚ÙŠÙ… ÙˆÙ…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„Ø­Ø±Ø¬Ø© ÙÙŠ ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø£Ø¯ÙˆÙŠØ©.',
+            solution: 'ØªØ·Ø¨ÙŠÙ‚ Ø£Ø­Ø¯Ø« ØªÙ‚Ù†ÙŠØ§Øª Ø§Ù„ØºØ±Ù Ø§Ù„Ù†Ø¸ÙŠÙØ©ØŒ ÙˆØªÙˆÙÙŠØ± ÙˆØ­Ø¯Ø§Øª Ù…Ø¹Ø§Ù„Ø¬Ø© Ù‡ÙˆØ§Ø¡ Ù…ØªØ®ØµØµØ© Ù…Ø¹ Ø£Ù†Ø¸Ù…Ø© ØªØ±Ø´ÙŠØ­ Ù…ØªÙ‚Ø¯Ù…Ø© Ù„Ø¶Ù…Ø§Ù† Ø¬ÙˆØ¯Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©.'
+        }
+    },
+    {
+        id: 'pharmaceutical-plant-jubail',
+        category: 'industrial',
+        name: 'Ø¬Ø§Ù…Ø¹Ø©Ø¨Ø¯ÙŠØ©',
+        description: 'Ù…Ø´Ø±ÙˆØ¹ Ù…ØªÙƒØ§Ù…Ù„ Ù„ØªØµÙ…ÙŠÙ… ÙˆØªÙ†ÙÙŠØ° Ø£Ù†Ø¸Ù…Ø© ØªÙƒÙŠÙŠÙ Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù†Ø¸ÙŠÙ (Clean Room HVAC) Ù„Ù…ØµÙ†Ø¹ Ø£Ø¯ÙˆÙŠØ© ÙÙŠ Ø§Ù„Ø¬Ø¨ÙŠÙ„ØŒ ÙˆÙÙ‚Ù‹Ø§ Ù„Ù„Ù…Ø¹Ø§ÙŠÙŠØ± Ø§Ù„Ø¯ÙˆÙ„ÙŠØ© GMP.',
+        image: 'https://i.ibb.co/BKNmqPj7/1702473044724.webp',
+        details: {
+            sector: 'ØµÙ†Ø§Ø¹ÙŠ',
+            completionDate: '2025-01-20',
+            location: 'Ø§Ù„Ø¬Ø¨ÙŠÙ„ Ø§Ù„ØµÙ†Ø§Ø¹ÙŠØ©ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©',
+            servicesProvided: 'ØªØµÙ…ÙŠÙ… ÙˆØ¨Ù†Ø§Ø¡ ØºØ±Ù Ù†Ø¸ÙŠÙØ© (Clean Rooms)ØŒ Ø£Ù†Ø¸Ù…Ø© HVAC Ù…Ø®ØµØµØ© Ù„ØºØ±Ù Ø§Ù„Ø¶ØºØ·ØŒ ÙÙ„Ø§ØªØ± HEPA Ùˆ ULPAØŒ Ø£Ù†Ø¸Ù…Ø© Ù…Ø±Ø§Ù‚Ø¨Ø© Ø§Ù„Ø¬ÙˆØ¯Ø©.',
+            challenge: 'Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø£Ù‚ØµÙ‰ Ø¯Ø±Ø¬Ø§Øª Ø§Ù„Ù†Ø¸Ø§ÙØ© ÙˆØ§Ù„ØªØ¹Ù‚ÙŠÙ… ÙˆÙ…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„Ø­Ø±Ø¬Ø© ÙÙŠ ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø£Ø¯ÙˆÙŠØ©.',
+            solution: 'ØªØ·Ø¨ÙŠÙ‚ Ø£Ø­Ø¯Ø« ØªÙ‚Ù†ÙŠØ§Øª Ø§Ù„ØºØ±Ù Ø§Ù„Ù†Ø¸ÙŠÙØ©ØŒ ÙˆØªÙˆÙÙŠØ± ÙˆØ­Ø¯Ø§Øª Ù…Ø¹Ø§Ù„Ø¬Ø© Ù‡ÙˆØ§Ø¡ Ù…ØªØ®ØµØµØ© Ù…Ø¹ Ø£Ù†Ø¸Ù…Ø© ØªØ±Ø´ÙŠØ­ Ù…ØªÙ‚Ø¯Ù…Ø© Ù„Ø¶Ù…Ø§Ù† Ø¬ÙˆØ¯Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©.'
+        }
+    },
+     {
+        id: 'pharmaceutical-plant-jubail',
+        category: 'industrial',
+        name: 'Ø§Ù„Ø¬Ø§Ù…Ø¹Ø© Ø§Ù„Ù…Ø§Ù†ÙŠØ©',
+        description: 'Ù…Ø´Ø±ÙˆØ¹ Ù…ØªÙƒØ§Ù…Ù„ Ù„ØªØµÙ…ÙŠÙ… ÙˆØªÙ†ÙÙŠØ° Ø£Ù†Ø¸Ù…Ø© ØªÙƒÙŠÙŠÙ Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù†Ø¸ÙŠÙ (Clean Room HVAC) Ù„Ù…ØµÙ†Ø¹ Ø£Ø¯ÙˆÙŠØ© ÙÙŠ Ø§Ù„Ø¬Ø¨ÙŠÙ„ØŒ ÙˆÙÙ‚Ù‹Ø§ Ù„Ù„Ù…Ø¹Ø§ÙŠÙŠØ± Ø§Ù„Ø¯ÙˆÙ„ÙŠØ© GMP.',
+        image: 'https://i.ibb.co/N2b5sCcX/download.jpg',
+        details: {
+            sector: 'ØµÙ†Ø§Ø¹ÙŠ',
+            completionDate: '2025-01-20',
+            location: 'Ø§Ù„Ø¬Ø¨ÙŠÙ„ Ø§Ù„ØµÙ†Ø§Ø¹ÙŠØ©ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©',
+            servicesProvided: 'ØªØµÙ…ÙŠÙ… ÙˆØ¨Ù†Ø§Ø¡ ØºØ±Ù Ù†Ø¸ÙŠÙØ© (Clean Rooms)ØŒ Ø£Ù†Ø¸Ù…Ø© HVAC Ù…Ø®ØµØµØ© Ù„ØºØ±Ù Ø§Ù„Ø¶ØºØ·ØŒ ÙÙ„Ø§ØªØ± HEPA Ùˆ ULPAØŒ Ø£Ù†Ø¸Ù…Ø© Ù…Ø±Ø§Ù‚Ø¨Ø© Ø§Ù„Ø¬ÙˆØ¯Ø©.',
+            challenge: 'Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø£Ù‚ØµÙ‰ Ø¯Ø±Ø¬Ø§Øª Ø§Ù„Ù†Ø¸Ø§ÙØ© ÙˆØ§Ù„ØªØ¹Ù‚ÙŠÙ… ÙˆÙ…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„Ø­Ø±Ø¬Ø© ÙÙŠ ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø£Ø¯ÙˆÙŠØ©.',
+            solution: 'ØªØ·Ø¨ÙŠÙ‚ Ø£Ø­Ø¯Ø« ØªÙ‚Ù†ÙŠØ§Øª Ø§Ù„ØºØ±Ù Ø§Ù„Ù†Ø¸ÙŠÙØ©ØŒ ÙˆØªÙˆÙÙŠØ± ÙˆØ­Ø¯Ø§Øª Ù…Ø¹Ø§Ù„Ø¬Ø© Ù‡ÙˆØ§Ø¡ Ù…ØªØ®ØµØµØ© Ù…Ø¹ Ø£Ù†Ø¸Ù…Ø© ØªØ±Ø´ÙŠØ­ Ù…ØªÙ‚Ø¯Ù…Ø© Ù„Ø¶Ù…Ø§Ù† Ø¬ÙˆØ¯Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©.'
+        }
+    },
+    {
+        id: 'pharmaceutical-plant-jubail',
+        category: 'industrial',
+        name: 'Ø¬Ø§Ù…Ø¹Ø©Ø§Ù„Ù‚Ø§Ù‡Ø±Ù‡',
+        description: 'Ù…Ø´Ø±ÙˆØ¹ Ù…ØªÙƒØ§Ù…Ù„ Ù„ØªØµÙ…ÙŠÙ… ÙˆØªÙ†ÙÙŠØ° Ø£Ù†Ø¸Ù…Ø© ØªÙƒÙŠÙŠÙ Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù†Ø¸ÙŠÙ (Clean Room HVAC) Ù„Ù…ØµÙ†Ø¹ Ø£Ø¯ÙˆÙŠØ© ÙÙŠ Ø§Ù„Ø¬Ø¨ÙŠÙ„ØŒ ÙˆÙÙ‚Ù‹Ø§ Ù„Ù„Ù…Ø¹Ø§ÙŠÙŠØ± Ø§Ù„Ø¯ÙˆÙ„ÙŠØ© GMP.',
+        image: 'https://i.ibb.co/ZRGGM8NT/1716460045lcj-CPFRFhs.webp',
+        details: {
+            sector: 'ØµÙ†Ø§Ø¹ÙŠ',
+            completionDate: '2025-01-20',
+            location: 'Ø§Ù„Ø¬Ø¨ÙŠÙ„ Ø§Ù„ØµÙ†Ø§Ø¹ÙŠØ©ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©',
+            servicesProvided: 'ØªØµÙ…ÙŠÙ… ÙˆØ¨Ù†Ø§Ø¡ ØºØ±Ù Ù†Ø¸ÙŠÙØ© (Clean Rooms)ØŒ Ø£Ù†Ø¸Ù…Ø© HVAC Ù…Ø®ØµØµØ© Ù„ØºØ±Ù Ø§Ù„Ø¶ØºØ·ØŒ ÙÙ„Ø§ØªØ± HEPA Ùˆ ULPAØŒ Ø£Ù†Ø¸Ù…Ø© Ù…Ø±Ø§Ù‚Ø¨Ø© Ø§Ù„Ø¬ÙˆØ¯Ø©.',
+            challenge: 'Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø£Ù‚ØµÙ‰ Ø¯Ø±Ø¬Ø§Øª Ø§Ù„Ù†Ø¸Ø§ÙØ© ÙˆØ§Ù„ØªØ¹Ù‚ÙŠÙ… ÙˆÙ…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„Ø­Ø±Ø¬Ø© ÙÙŠ ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø£Ø¯ÙˆÙŠØ©.',
+            solution: 'ØªØ·Ø¨ÙŠÙ‚ Ø£Ø­Ø¯Ø« ØªÙ‚Ù†ÙŠØ§Øª Ø§Ù„ØºØ±Ù Ø§Ù„Ù†Ø¸ÙŠÙØ©ØŒ ÙˆØªÙˆÙÙŠØ± ÙˆØ­Ø¯Ø§Øª Ù…Ø¹Ø§Ù„Ø¬Ø© Ù‡ÙˆØ§Ø¡ Ù…ØªØ®ØµØµØ© Ù…Ø¹ Ø£Ù†Ø¸Ù…Ø© ØªØ±Ø´ÙŠØ­ Ù…ØªÙ‚Ø¯Ù…Ø© Ù„Ø¶Ù…Ø§Ù† Ø¬ÙˆØ¯Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©.'
+        }
+    },
+      {
+        id: 'pharmaceutical-plant-jubail',
+        category: 'industrial',
+        name: 'ÙÙ†Ø¯Ù‚ Ø§Ù„ÙƒÙŠØ§Ù† Ø§Ù„Ø¹Ø³ÙƒØ±ÙŠ',
+        description: 'Ù…Ø´Ø±ÙˆØ¹ Ù…ØªÙƒØ§Ù…Ù„ Ù„ØªØµÙ…ÙŠÙ… ÙˆØªÙ†ÙÙŠØ° Ø£Ù†Ø¸Ù…Ø© ØªÙƒÙŠÙŠÙ Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù†Ø¸ÙŠÙ (Clean Room HVAC) Ù„Ù…ØµÙ†Ø¹ Ø£Ø¯ÙˆÙŠØ© ÙÙŠ Ø§Ù„Ø¬Ø¨ÙŠÙ„ØŒ ÙˆÙÙ‚Ù‹Ø§ Ù„Ù„Ù…Ø¹Ø§ÙŠÙŠØ± Ø§Ù„Ø¯ÙˆÙ„ÙŠØ© GMP.',
+        image: 'https://i.ibb.co/7xXd59Vk/images.jpg',
+        details: {
+            sector: 'ØµÙ†Ø§Ø¹ÙŠ',
+            completionDate: '2025-01-20',
+            location: 'Ø§Ù„Ø¬Ø¨ÙŠÙ„ Ø§Ù„ØµÙ†Ø§Ø¹ÙŠØ©ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©',
+            servicesProvided: 'ØªØµÙ…ÙŠÙ… ÙˆØ¨Ù†Ø§Ø¡ ØºØ±Ù Ù†Ø¸ÙŠÙØ© (Clean Rooms)ØŒ Ø£Ù†Ø¸Ù…Ø© HVAC Ù…Ø®ØµØµØ© Ù„ØºØ±Ù Ø§Ù„Ø¶ØºØ·ØŒ ÙÙ„Ø§ØªØ± HEPA Ùˆ ULPAØŒ Ø£Ù†Ø¸Ù…Ø© Ù…Ø±Ø§Ù‚Ø¨Ø© Ø§Ù„Ø¬ÙˆØ¯Ø©.',
+            challenge: 'Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø£Ù‚ØµÙ‰ Ø¯Ø±Ø¬Ø§Øª Ø§Ù„Ù†Ø¸Ø§ÙØ© ÙˆØ§Ù„ØªØ¹Ù‚ÙŠÙ… ÙˆÙ…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„Ø­Ø±Ø¬Ø© ÙÙŠ ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø£Ø¯ÙˆÙŠØ©.',
+            solution: 'ØªØ·Ø¨ÙŠÙ‚ Ø£Ø­Ø¯Ø« ØªÙ‚Ù†ÙŠØ§Øª Ø§Ù„ØºØ±Ù Ø§Ù„Ù†Ø¸ÙŠÙØ©ØŒ ÙˆØªÙˆÙÙŠØ± ÙˆØ­Ø¯Ø§Øª Ù…Ø¹Ø§Ù„Ø¬Ø© Ù‡ÙˆØ§Ø¡ Ù…ØªØ®ØµØµØ© Ù…Ø¹ Ø£Ù†Ø¸Ù…Ø© ØªØ±Ø´ÙŠØ­ Ù…ØªÙ‚Ø¯Ù…Ø© Ù„Ø¶Ù…Ø§Ù† Ø¬ÙˆØ¯Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©.'
+        }
+    },
+     {
+        id: 'pharmaceutical-plant-jubail',
+        category: 'industrial',
+        name: 'Ù…Ø³ØªØ´ÙÙŠ Ø¨Ù‡ÙŠÙ‡',
+        description: 'Ù…Ø´Ø±ÙˆØ¹ Ù…ØªÙƒØ§Ù…Ù„ Ù„ØªØµÙ…ÙŠÙ… ÙˆØªÙ†ÙÙŠØ° Ø£Ù†Ø¸Ù…Ø© ØªÙƒÙŠÙŠÙ Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù†Ø¸ÙŠÙ (Clean Room HVAC) Ù„Ù…ØµÙ†Ø¹ Ø£Ø¯ÙˆÙŠØ© ÙÙŠ Ø§Ù„Ø¬Ø¨ÙŠÙ„ØŒ ÙˆÙÙ‚Ù‹Ø§ Ù„Ù„Ù…Ø¹Ø§ÙŠÙŠØ± Ø§Ù„Ø¯ÙˆÙ„ÙŠØ© GMP.',
+        image: 'https://i.ibb.co/Y741ZVQL/53801717676414.jpg',
+        details: {
+            sector: 'ØµÙ†Ø§Ø¹ÙŠ',
+            completionDate: '2025-01-20',
+            location: 'Ø§Ù„Ø¬Ø¨ÙŠÙ„ Ø§Ù„ØµÙ†Ø§Ø¹ÙŠØ©ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©',
+            servicesProvided: 'ØªØµÙ…ÙŠÙ… ÙˆØ¨Ù†Ø§Ø¡ ØºØ±Ù Ù†Ø¸ÙŠÙØ© (Clean Rooms)ØŒ Ø£Ù†Ø¸Ù…Ø© HVAC Ù…Ø®ØµØµØ© Ù„ØºØ±Ù Ø§Ù„Ø¶ØºØ·ØŒ ÙÙ„Ø§ØªØ± HEPA Ùˆ ULPAØŒ Ø£Ù†Ø¸Ù…Ø© Ù…Ø±Ø§Ù‚Ø¨Ø© Ø§Ù„Ø¬ÙˆØ¯Ø©.',
+            challenge: 'Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø£Ù‚ØµÙ‰ Ø¯Ø±Ø¬Ø§Øª Ø§Ù„Ù†Ø¸Ø§ÙØ© ÙˆØ§Ù„ØªØ¹Ù‚ÙŠÙ… ÙˆÙ…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„Ø­Ø±Ø¬Ø© ÙÙŠ ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø£Ø¯ÙˆÙŠØ©.',
+            solution: 'ØªØ·Ø¨ÙŠÙ‚ Ø£Ø­Ø¯Ø« ØªÙ‚Ù†ÙŠØ§Øª Ø§Ù„ØºØ±Ù Ø§Ù„Ù†Ø¸ÙŠÙØ©ØŒ ÙˆØªÙˆÙÙŠØ± ÙˆØ­Ø¯Ø§Øª Ù…Ø¹Ø§Ù„Ø¬Ø© Ù‡ÙˆØ§Ø¡ Ù…ØªØ®ØµØµØ© Ù…Ø¹ Ø£Ù†Ø¸Ù…Ø© ØªØ±Ø´ÙŠØ­ Ù…ØªÙ‚Ø¯Ù…Ø© Ù„Ø¶Ù…Ø§Ù† Ø¬ÙˆØ¯Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©.'
+        }
+    },
+     {
+        id: 'pharmaceutical-plant-jubail',
+        category: 'industrial',
+        name: 'Ù…Ø³ØªØ´ÙÙŠ Ø¨Ù‡ÙŠÙ‡',
+        description: 'Ù…Ø´Ø±ÙˆØ¹ Ù…ØªÙƒØ§Ù…Ù„ Ù„ØªØµÙ…ÙŠÙ… ÙˆØªÙ†ÙÙŠØ° Ø£Ù†Ø¸Ù…Ø© ØªÙƒÙŠÙŠÙ Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù†Ø¸ÙŠÙ (Clean Room HVAC) Ù„Ù…ØµÙ†Ø¹ Ø£Ø¯ÙˆÙŠØ© ÙÙŠ Ø§Ù„Ø¬Ø¨ÙŠÙ„ØŒ ÙˆÙÙ‚Ù‹Ø§ Ù„Ù„Ù…Ø¹Ø§ÙŠÙŠØ± Ø§Ù„Ø¯ÙˆÙ„ÙŠØ© GMP.',
+        image: 'https://i.ibb.co/Y741ZVQL/53801717676414.jpg',
+        details: {
+            sector: 'ØµÙ†Ø§Ø¹ÙŠ',
+            completionDate: '2025-01-20',
+            location: 'Ø§Ù„Ø¬Ø¨ÙŠÙ„ Ø§Ù„ØµÙ†Ø§Ø¹ÙŠØ©ØŒ Ø§Ù„Ù…Ù…Ù„ÙƒØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ø§Ù„Ø³Ø¹ÙˆØ¯ÙŠØ©',
+            servicesProvided: 'ØªØµÙ…ÙŠÙ… ÙˆØ¨Ù†Ø§Ø¡ ØºØ±Ù Ù†Ø¸ÙŠÙØ© (Clean Rooms)ØŒ Ø£Ù†Ø¸Ù…Ø© HVAC Ù…Ø®ØµØµØ© Ù„ØºØ±Ù Ø§Ù„Ø¶ØºØ·ØŒ ÙÙ„Ø§ØªØ± HEPA Ùˆ ULPAØŒ Ø£Ù†Ø¸Ù…Ø© Ù…Ø±Ø§Ù‚Ø¨Ø© Ø§Ù„Ø¬ÙˆØ¯Ø©.',
+            challenge: 'Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø£Ù‚ØµÙ‰ Ø¯Ø±Ø¬Ø§Øª Ø§Ù„Ù†Ø¸Ø§ÙØ© ÙˆØ§Ù„ØªØ¹Ù‚ÙŠÙ… ÙˆÙ…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„Ø­Ø±Ø¬Ø© ÙÙŠ ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø£Ø¯ÙˆÙŠØ©.',
+            solution: 'ØªØ·Ø¨ÙŠÙ‚ Ø£Ø­Ø¯Ø« ØªÙ‚Ù†ÙŠØ§Øª Ø§Ù„ØºØ±Ù Ø§Ù„Ù†Ø¸ÙŠÙØ©ØŒ ÙˆØªÙˆÙÙŠØ± ÙˆØ­Ø¯Ø§Øª Ù…Ø¹Ø§Ù„Ø¬Ø© Ù‡ÙˆØ§Ø¡ Ù…ØªØ®ØµØµØ© Ù…Ø¹ Ø£Ù†Ø¸Ù…Ø© ØªØ±Ø´ÙŠØ­ Ù…ØªÙ‚Ø¯Ù…Ø© Ù„Ø¶Ù…Ø§Ù† Ø¬ÙˆØ¯Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©.'
+        }
+    },
+    // Ø£Ø¶Ù Ø§Ù„Ù…Ø²ÙŠØ¯ Ù…Ù† Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ Ù‡Ù†Ø§ Ø¨Ù†ÙØ³ Ø§Ù„ØªÙ†Ø³ÙŠÙ‚
 ];
 
-// æÙíİÉ áÚÑÖ ÇáãÔÇÑíÚ İí ÇáÔÈßÉ (Projects Page)
-function displayProjects(projects) {
-    const projectsGrid = document.getElementById('projectsGrid');
-    if (!projectsGrid) return; // Exit if not on projects.html
 
-    projectsGrid.innerHTML = ''; // Clear previous content
+// ******************************************************************
+// ÙˆØ¸Ø§Ø¦Ù Ø¹Ø§Ù…Ø© Ù„Ø¬Ù…ÙŠØ¹ Ø§Ù„ØµÙØ­Ø§Øª
+// ******************************************************************
 
-    const currentLang = document.documentElement.lang || 'ar'; // Get current language
+document.addEventListener('DOMContentLoaded', () => {
+    // ØªÙØ¹ÙŠÙ„ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ù…Ù†Ø³Ø¯Ù„Ø© (Dropdown)
+    const dropdown = document.querySelector('.dropdown');
+    if (dropdown) {
+        dropdown.addEventListener('click', function(event) {
+            // Ù…Ù†Ø¹ Ø¥ØºÙ„Ø§Ù‚ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø¹Ù†Ø¯ Ø§Ù„Ù†Ù‚Ø± Ø¯Ø§Ø®Ù„Ù‡Ø§
+            event.stopPropagation();
+            this.classList.toggle('active');
+        });
+        // Ø¥ØºÙ„Ø§Ù‚ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø¹Ù†Ø¯ Ø§Ù„Ù†Ù‚Ø± Ø®Ø§Ø±Ø¬Ù‡Ø§
+        document.addEventListener('click', function() {
+            dropdown.classList.remove('active');
+        });
+    }
 
-    if (projects.length === 0) {
-        projectsGrid.innerHTML = `<p class="no-projects-message">${currentLang === 'ar' ? 'áÇ ÊæÌÏ ãÔÇÑíÚ áÚÑÖåÇ İí åĞå ÇáİÆÉ.' : 'No projects to display in this category.'}</p>`;
+    // ÙØ­Øµ Ø§Ù„Ù…Ø³Ø§Ø± Ø§Ù„Ø­Ø§Ù„ÙŠ ÙˆØªÙØ¹ÙŠÙ„ Ø§Ù„ÙˆØ¸Ø§Ø¦Ù Ø§Ù„Ø®Ø§ØµØ© Ø¨Ø§Ù„ØµÙØ­Ø©
+    const path = window.location.pathname;
+
+    if (path.includes('index.html') || path === '/') {
+        initializeHeroSlider();
+        initializeStatisticsCounter();
+    } else if (path.includes('products.html')) {
+        initializeProductFiltering();
+    } else if (path.includes('product-detail.html')) {
+        loadProductDetails();
+    } else if (path.includes('projects.html')) {
+        initializeProjectFiltering(); // ÙˆØ¸ÙŠÙØ© Ø¬Ø¯ÙŠØ¯Ø© Ù„Ù„Ù…Ø´Ø§Ø±ÙŠØ¹
+    }
+});
+
+
+// ******************************************************************
+// ÙˆØ¸Ø§Ø¦Ù Ø®Ø§ØµØ© Ø¨ØµÙØ­Ø© index.html (Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©)
+// ******************************************************************
+
+function initializeHeroSlider() {
+    const slides = document.querySelectorAll('.hero-slider .slide');
+    const dots = document.querySelectorAll('.slider-nav .dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            dots[i].classList.remove('active');
+        });
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function startSlider() {
+        slideInterval = setInterval(nextSlide, 5000); // ØªØºÙŠÙŠØ± ÙƒÙ„ 5 Ø«ÙˆØ§Ù†Ù
+    }
+
+    function stopSlider() {
+        clearInterval(slideInterval);
+    }
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+            const slideIndex = parseInt(e.target.dataset.slide);
+            stopSlider(); // Ø£ÙˆÙ‚Ù Ø§Ù„Ø³Ù„Ø§ÙŠØ¯Ø± Ø¹Ù†Ø¯ Ø§Ù„Ù†Ù‚Ø± Ø§Ù„ÙŠØ¯ÙˆÙŠ
+            showSlide(slideIndex);
+            startSlider(); // Ø£Ø¹Ø¯ ØªØ´ØºÙŠÙ„ Ø§Ù„Ø³Ù„Ø§ÙŠØ¯Ø± Ø¨Ø¹Ø¯ Ø§Ù„Ù†Ù‚Ø±
+        });
+    });
+
+    // Ø¨Ø¯Ø¡ Ø§Ù„Ø³Ù„Ø§ÙŠØ¯Ø± Ø¹Ù†Ø¯ ØªØ­Ù…ÙŠÙ„ Ø§Ù„ØµÙØ­Ø©
+    if (slides.length > 0) { // ØªØ£ÙƒØ¯ Ù…Ù† ÙˆØ¬ÙˆØ¯ Ø´Ø±Ø§Ø¦Ø­ Ù‚Ø¨Ù„ Ø§Ù„Ø¨Ø¯Ø¡
+        showSlide(currentSlide);
+        startSlider();
+
+        // Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø³Ù„Ø§ÙŠØ¯Ø± Ø¹Ù†Ø¯ Ø§Ù„ØªØ­ÙˆÙŠÙ… ÙˆØ§Ø³ØªØ¦Ù†Ø§ÙÙ‡ Ø¹Ù†Ø¯ Ø§Ù„Ù…ØºØ§Ø¯Ø±Ø©
+        const heroSection = document.querySelector('.hero-section');
+        if (heroSection) {
+            heroSection.addEventListener('mouseenter', stopSlider);
+            heroSection.addEventListener('mouseleave', startSlider);
+        }
+    }
+}
+
+function initializeStatisticsCounter() {
+    const statsSection = document.querySelector('.statistics-section');
+    const statsNumbers = document.querySelectorAll('.stat-item .number');
+    let animated = false; // Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„Ø¹Ø¯Ø§Ø¯ Ù…Ø±Ø© ÙˆØ§Ø­Ø¯Ø© ÙÙ‚Ø·
+
+    const animateNumbers = () => {
+        statsNumbers.forEach(numberElement => {
+            const target = parseInt(numberElement.dataset.target);
+            let current = 0;
+            const increment = target / 100; // ÙŠÙ…ÙƒÙ† ØªØ¹Ø¯ÙŠÙ„ Ø³Ø±Ø¹Ø© Ø§Ù„Ø¹Ø¯Ø§Ø¯ Ù‡Ù†Ø§
+
+            const updateCounter = () => {
+                if (current < target) {
+                    current += increment;
+                    numberElement.textContent = Math.ceil(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    numberElement.textContent = target;
+                }
+            };
+            updateCounter();
+        });
+    };
+
+    // Ù…Ø±Ø§Ù‚Ø¨Ø© Ù‚Ø³Ù… Ø§Ù„Ø¥Ø­ØµØ§Ø¦ÙŠØ§Øª Ù„ØªØ¨Ø¯Ø£ Ø§Ù„Ø­Ø±ÙƒØ© Ø¹Ù†Ø¯ Ø¸Ù‡ÙˆØ±Ù‡ ÙÙŠ Ø§Ù„Ø´Ø§Ø´Ø©
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !animated) {
+                animateNumbers();
+                animated = true;
+                observer.disconnect(); // ØªÙˆÙ‚Ù Ø¹Ù† Ø§Ù„Ù…Ø±Ø§Ù‚Ø¨Ø© Ø¨Ø¹Ø¯ Ø§Ù„ØªØ´ØºÙŠÙ„
+            }
+        });
+    }, {
+        threshold: 0.5 // Ø¹Ù†Ø¯Ù…Ø§ ÙŠÙƒÙˆÙ† 50% Ù…Ù† Ø§Ù„Ù‚Ø³Ù… Ù…Ø±Ø¦ÙŠØ§Ù‹
+    });
+
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+}
+
+
+// ******************************************************************
+// ÙˆØ¸Ø§Ø¦Ù Ø®Ø§ØµØ© Ø¨ØµÙØ­Ø© products.html (Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª)
+// ******************************************************************
+
+function initializeProductFiltering() {
+    const filterTabs = document.querySelectorAll('.products-grid-section .filter-tab');
+    const productsContainer = document.getElementById('products-container');
+    const currentCategoryTitle = document.getElementById('current-category-title');
+    const currentCategoryDescription = document.getElementById('current-category-description');
+
+    const categoryTitles = {
+        'all': {
+            title: 'ÙƒÙ„ Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª',
+            description: 'Ø§Ø³ØªÙƒØ´Ù Ù…Ø¬Ù…ÙˆØ¹ØªÙ†Ø§ Ø§Ù„Ù…ØªÙ†ÙˆØ¹Ø© Ù…Ù† Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª Ø¹Ø§Ù„ÙŠØ© Ø§Ù„Ø¬ÙˆØ¯Ø©.'
+        },
+        'air-ducts': {
+            title: 'Ù…Ø¬Ø§Ø±ÙŠ Ø§Ù„Ù‡ÙˆØ§Ø¡',
+            description: 'Ø­Ù„ÙˆÙ„ Ù…ØªÙƒØ§Ù…Ù„Ø© Ù„Ù…Ø¬Ø§Ø±ÙŠ Ø§Ù„Ù‡ÙˆØ§Ø¡ Ø¨Ø£Ù†ÙˆØ§Ø¹Ù‡Ø§ Ø§Ù„Ù…Ø®ØªÙ„ÙØ©ØŒ Ù…ØµÙ…Ù…Ø© Ù„Ø£Ù‚ØµÙ‰ ÙƒÙØ§Ø¡Ø©.'
+        },
+        'ahu-units': {
+            title: 'ÙˆØ­Ø¯Ø§Øª Ù…Ù†Ø§ÙˆÙ„Ø© Ø§Ù„Ù‡ÙˆØ§Ø¡ (AHU)',
+            description: 'ÙˆØ­Ø¯Ø§Øª AHU Ù…ØªØ·ÙˆØ±Ø© Ù„ØªÙƒÙŠÙŠÙ ÙˆØªÙ†Ù‚ÙŠØ© Ø§Ù„Ù‡ÙˆØ§Ø¡ ÙÙŠ Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ Ø§Ù„ÙƒØ¨ÙŠØ±Ø©.'
+        },
+        'ventilation-systems': {
+            title: 'Ø£Ù†Ø¸Ù…Ø© Ø§Ù„ØªÙ‡ÙˆÙŠØ©',
+            description: 'Ø£Ù†Ø¸Ù…Ø© ØªÙ‡ÙˆÙŠØ© ÙØ¹Ø§Ù„Ø© ØªØ¶Ù…Ù† Ø¬ÙˆØ¯Ø© Ù‡ÙˆØ§Ø¡ Ù…Ø«Ø§Ù„ÙŠØ© ÙÙŠ Ø¨ÙŠØ¦Ø§Øª Ø§Ù„Ø¹Ù…Ù„.'
+        }
+        // Ø£Ø¶Ù Ø§Ù„Ù…Ø²ÙŠØ¯ Ù…Ù† Ø¹Ù†Ø§ÙˆÙŠÙ† Ø§Ù„ÙØ¦Ø§Øª Ù‡Ù†Ø§
+    };
+
+    // ÙˆØ¸ÙŠÙØ© Ù„ØªØ­Ø¯ÙŠØ« Ø¹Ù†ÙˆØ§Ù† ÙˆÙˆØµÙ Ø§Ù„ØµÙØ­Ø©
+    function updatePageTitle(category) {
+        const info = categoryTitles[category] || categoryTitles['all'];
+        if (currentCategoryTitle) currentCategoryTitle.textContent = info.title;
+        if (currentCategoryDescription) currentCategoryDescription.textContent = info.description;
+    }
+
+    // ÙˆØ¸ÙŠÙØ© Ù„Ø¹Ø±Ø¶ Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª ÙÙŠ Ø§Ù„Ø´Ø¨ÙƒØ©
+    function displayProducts(productsToDisplay) {
+        if (!productsContainer) return;
+        productsContainer.innerHTML = ''; // Ù…Ø³Ø­ Ø§Ù„Ù…Ø­ØªÙˆÙ‰ Ø§Ù„Ø­Ø§Ù„ÙŠ
+
+        if (productsToDisplay.length === 0) {
+            productsContainer.innerHTML = '<p style="text-align: center; font-size: 1.2em; color: var(--light-text-color);">Ù„Ø§ ØªÙˆØ¬Ø¯ Ù…Ù†ØªØ¬Ø§Øª ÙÙŠ Ù‡Ø°Ù‡ Ø§Ù„ÙØ¦Ø© Ø­Ø§Ù„ÙŠØ§Ù‹.</p>';
+            return;
+        }
+
+        productsToDisplay.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.classList.add('product-card');
+            productCard.setAttribute('data-category', product.category);
+            productCard.setAttribute('data-product-id', product.id);
+
+            productCard.innerHTML = `
+                <a href="product-detail.html?id=${product.id}" class="product-link">
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="product-info">
+                        <h4>${product.name}</h4>
+                        <p>${product.description.substring(0, 100)}...</p>
+                    </div>
+                </a>
+                <a href="${product.downloadLink}" class="btn download-btn-small" download><i class="fas fa-download"></i> ØªØ­Ù…ÙŠÙ„ Ø§Ù„ØªÙØ§ØµÙŠÙ„</a>
+            `;
+            productsContainer.appendChild(productCard);
+
+            // Ø¥Ø¶Ø§ÙØ© ÙƒÙ„Ø§Ø³ 'show' Ø¨Ø¹Ø¯ ÙØªØ±Ø© Ù‚ØµÙŠØ±Ø© Ù„ØªØ·Ø¨ÙŠÙ‚ Ø§Ù„ØªØ£Ø«ÙŠØ± Ø§Ù„Ø¨ØµØ±ÙŠ
+            setTimeout(() => productCard.classList.add('show'), 50);
+        });
+    }
+
+    // ÙˆØ¸ÙŠÙØ© ØªØµÙÙŠØ© Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª
+    function filterAndDisplayProducts(selectedCategory) {
+        const filteredProducts = selectedCategory === 'all'
+            ? productsData
+            : productsData.filter(product => product.category === selectedCategory);
+
+        displayProducts(filteredProducts);
+        updatePageTitle(selectedCategory);
+    }
+
+    // Ù…Ø¹Ø§Ù„Ø¬Ø© Ø§Ù„Ù†Ù‚Ø± Ø¹Ù„Ù‰ Ø£Ø²Ø±Ø§Ø± Ø§Ù„ÙÙ„ØªØ±Ø©
+    filterTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            filterTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            const category = tab.dataset.category;
+            filterAndDisplayProducts(category);
+            // ØªØ­Ø¯ÙŠØ« URL Ø¯ÙˆÙ† Ø¥Ø¹Ø§Ø¯Ø© ØªØ­Ù…ÙŠÙ„ Ø§Ù„ØµÙØ­Ø©
+            history.pushState(null, '', `products.html?category=${category}`);
+        });
+    });
+
+    // Ù…Ø¹Ø§Ù„Ø¬Ø© ØªØ­Ù…ÙŠÙ„ Ø§Ù„ØµÙØ­Ø© Ø¨Ù†Ø§Ø¡Ù‹ Ø¹Ù„Ù‰ Ù…Ø¹Ø§Ù…Ù„ URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCategory = urlParams.get('category') || 'all';
+
+    // ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø²Ø± Ø§Ù„Ù…Ù†Ø§Ø³Ø¨ ÙˆØªØµÙÙŠØ© Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª Ø¹Ù†Ø¯ Ø§Ù„ØªØ­Ù…ÙŠÙ„ Ø§Ù„Ø£ÙˆÙ„ÙŠ
+    const activeTab = document.querySelector(`.products-grid-section .filter-tab[data-category="${initialCategory}"]`);
+    if (activeTab) {
+        activeTab.classList.add('active');
+    } else {
+        document.querySelector('.products-grid-section .filter-tab[data-category="all"]').classList.add('active');
+    }
+    filterAndDisplayProducts(initialCategory);
+}
+
+
+// ******************************************************************
+// ÙˆØ¸Ø§Ø¦Ù Ø®Ø§ØµØ© Ø¨ØµÙØ­Ø© product-detail.html (ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ù†ØªØ¬)
+// ******************************************************************
+
+function loadProductDetails() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+
+    if (!productId) {
+        console.error('Product ID not found in URL.');
+        document.getElementById('product-detail-page-title').textContent = 'Ø®Ø·Ø£: Ø§Ù„Ù…Ù†ØªØ¬ ØºÙŠØ± Ù…ÙˆØ¬ÙˆØ¯';
+        document.getElementById('product-detail-page-description').textContent = 'ÙŠØ±Ø¬Ù‰ Ø§Ù„Ø¹ÙˆØ¯Ø© Ù„ØµÙØ­Ø© Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª ÙˆØ§Ø®ØªÙŠØ§Ø± Ù…Ù†ØªØ¬ ØµØ§Ù„Ø­.';
+        document.querySelector('.product-detail-content').innerHTML = '<p style="text-align: center; font-size: 1.5em; padding: 50px;">Ø¹Ø°Ø±Ø§Ù‹ØŒ Ù„Ù… ÙŠØªÙ… Ø§Ù„Ø¹Ø«ÙˆØ± Ø¹Ù„Ù‰ ØªÙØ§ØµÙŠÙ„ Ù‡Ø°Ø§ Ø§Ù„Ù…Ù†ØªØ¬.</p>';
         return;
     }
 
-    projects.forEach(project => {
-        const projectCard = document.createElement('div');
-        projectCard.classList.add('project-card', 'animate__animated', 'animate__fadeInUp');
+    const product = productsData.find(p => p.id === productId);
 
-        const projectName = project[`name_${currentLang}`] || project.name_ar;
-        const projectDescription = project[`description_${currentLang}`] || project.description_ar;
-        const viewDetailsText = currentLang === 'ar' ? 'ÚÑÖ ÇáÊİÇÕíá' : 'View Details'; // Or link to a project-detail.html if implemented
+    if (product) {
+        // ØªØ­Ø¯ÙŠØ« Ø¹Ù†ÙˆØ§Ù† Ø§Ù„ØµÙØ­Ø©
+        document.title = `${product.name} - ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ù†ØªØ¬ - Ø¥Ø³Ù†Ø§Ø¯`;
+        if (document.getElementById('product-detail-page-title')) document.getElementById('product-detail-page-title').textContent = product.name;
+        if (document.getElementById('product-detail-page-description')) document.getElementById('product-detail-page-description').textContent = `ØªØ¹Ø±Ù Ø¹Ù„Ù‰ Ù…ÙˆØ§ØµÙØ§Øª ÙˆØ®ØµØ§Ø¦Øµ ${product.name}.`;
 
-        projectCard.innerHTML = `
-            <img src="${project.image}" alt="${projectName}">
-            <h3>${projectName}</h3>
-            <p>${projectDescription.substring(0, 150)}...</p>
-            <a href="#" class="button view-project-button">${viewDetailsText}</a>
-        `;
-        projectsGrid.appendChild(projectCard);
-    });
+        // ØªØ¹Ø¨Ø¦Ø© ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ù†ØªØ¬
+        if (document.getElementById('product-main-image')) document.getElementById('product-main-image').src = product.image;
+        if (document.getElementById('product-main-image')) document.getElementById('product-main-image').alt = product.name;
+        if (document.getElementById('product-name')) document.getElementById('product-name').textContent = product.name;
+        if (document.getElementById('product-description')) document.getElementById('product-description').textContent = product.description;
+
+        // ØªØ¹Ø¨Ø¦Ø© Ø§Ù„Ù…Ù…ÙŠØ²Ø§Øª
+        const featuresList = document.getElementById('product-features-list');
+        if (featuresList) {
+            featuresList.innerHTML = '';
+            product.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.innerHTML = `<i class="fas fa-check-circle"></i> ${feature}`;
+                featuresList.appendChild(li);
+            });
+        }
+
+        // ØªØ¹Ø¨Ø¦Ø© Ø§Ù„Ù…ÙˆØ§ØµÙØ§Øª Ø§Ù„ÙÙ†ÙŠØ©
+        const specsTableBody = document.querySelector('#product-specs-table tbody');
+        if (specsTableBody) {
+            specsTableBody.innerHTML = '';
+            for (const key in product.specs) {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `<td><strong>${key}:</strong></td><td>${product.specs[key]}</td>`;
+                specsTableBody.appendChild(tr);
+            }
+        }
+
+        // ØªØ­Ø¯ÙŠØ« Ø±Ø§Ø¨Ø· Ø§Ù„ØªØ­Ù…ÙŠÙ„
+        const downloadBtn = document.getElementById('product-download-btn');
+        if (downloadBtn) {
+            downloadBtn.href = product.downloadLink;
+        }
+
+        // ØªØ­Ù…ÙŠÙ„ Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª Ø°Ø§Øª Ø§Ù„ØµÙ„Ø© (ÙŠØ¹Ø±Ø¶ 3 Ù…Ù†ØªØ¬Ø§Øª Ø¹Ø´ÙˆØ§Ø¦ÙŠØ© Ù…Ù† Ù†ÙØ³ Ø§Ù„ÙØ¦Ø©)
+        const relatedProductsContainer = document.querySelector('.related-products .products-grid');
+        if (relatedProductsContainer) {
+            relatedProductsContainer.innerHTML = '';
+
+            const related = productsData.filter(p => p.category === product.category && p.id !== productId)
+                                       .sort(() => 0.5 - Math.random())
+                                       .slice(0, 3);
+
+            if (related.length > 0) {
+                related.forEach(relatedProduct => {
+                    const card = document.createElement('div');
+                    card.classList.add('product-card');
+                    card.setAttribute('data-category', relatedProduct.category);
+                    card.setAttribute('data-product-id', relatedProduct.id);
+                    card.innerHTML = `
+                        <a href="product-detail.html?id=${relatedProduct.id}" class="product-link">
+                            <img src="${relatedProduct.image}" alt="${relatedProduct.name}">
+                            <div class="product-info">
+                                <h4>${relatedProduct.name}</h4>
+                                <p>${relatedProduct.description.substring(0, 80)}...</p>
+                            </div>
+                        </a>
+                        <a href="${relatedProduct.downloadLink}" class="btn download-btn-small" download><i class="fas fa-download"></i> ØªØ­Ù…ÙŠÙ„ Ø§Ù„ØªÙØ§ØµÙŠÙ„</a>
+                    `;
+                    relatedProductsContainer.appendChild(card);
+                    // Add 'show' class for visual effect
+                    setTimeout(() => card.classList.add('show'), 50);
+                });
+            } else {
+                const noRelatedMsg = document.createElement('p');
+                noRelatedMsg.textContent = 'Ù„Ø§ ØªÙˆØ¬Ø¯ Ù…Ù†ØªØ¬Ø§Øª Ø°Ø§Øª ØµÙ„Ø© ÙÙŠ Ù‡Ø°Ù‡ Ø§Ù„ÙØ¦Ø© Ø­Ø§Ù„ÙŠØ§Ù‹.';
+                noRelatedMsg.style.textAlign = 'center';
+                noRelatedMsg.style.marginTop = '20px';
+                noRelatedMsg.style.fontSize = '1.1em';
+                relatedProductsContainer.appendChild(noRelatedMsg);
+            }
+        }
+
+    } else {
+        console.error(`Product with ID "${productId}" not found in data.`);
+        if (document.getElementById('product-detail-page-title')) document.getElementById('product-detail-page-title').textContent = 'Ø®Ø·Ø£: Ø§Ù„Ù…Ù†ØªØ¬ ØºÙŠØ± Ù…ÙˆØ¬ÙˆØ¯';
+        if (document.getElementById('product-detail-page-description')) document.getElementById('product-detail-page-description').textContent = 'ÙŠØ±Ø¬Ù‰ Ø§Ù„Ø¹ÙˆØ¯Ø© Ù„ØµÙØ­Ø© Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª ÙˆØ§Ø®ØªÙŠØ§Ø± Ù…Ù†ØªØ¬ ØµØ§Ù„Ø­.';
+        if (document.querySelector('.product-detail-content')) document.querySelector('.product-detail-content').innerHTML = '<p style="text-align: center; font-size: 1.5em; padding: 50px;">Ø¹Ø°Ø±Ø§Ù‹ØŒ Ù„Ù… ÙŠØªÙ… Ø§Ù„Ø¹Ø«ÙˆØ± Ø¹Ù„Ù‰ ØªÙØ§ØµÙŠÙ„ Ù‡Ø°Ø§ Ø§Ù„Ù…Ù†ØªØ¬.</p>';
+    }
 }
 
-// æÙíİÉ áÊÍÏíË ÚäæÇä ÕİÍÉ ÇáãÔÇÑíÚ
-function updateProjectPageTitle(category) {
-    const defaultTitle_ar = 'ãÔÇÑíÚäÇ - ÅÓäÇÏ';
-    const defaultTitle_en = 'Our Projects - ESNAD';
-    let newTitle_ar = defaultTitle_ar;
-    let newTitle_en = defaultTitle_en;
 
-    const currentLang = document.documentElement.lang || 'ar';
+// ******************************************************************
+// ÙˆØ¸Ø§Ø¦Ù Ø®Ø§ØµØ© Ø¨ØµÙØ­Ø© projects.html (Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹)
+// ******************************************************************
 
-    if (category === 'commercial') {
-        newTitle_ar = 'ÇáãÔÇÑíÚ ÇáÊÌÇÑíÉ - ÅÓäÇÏ';
-        newTitle_en = 'Commercial Projects - ESNAD';
-    } else if (category === 'residential') {
-        newTitle_ar = 'ÇáãÔÇÑíÚ ÇáÓßäíÉ - ÅÓäÇÏ';
-        newTitle_en = 'Residential Projects - ESNAD';
-    } else if (category === 'industrial') {
-        newTitle_ar = 'ÇáãÔÇÑíÚ ÇáÕäÇÚíÉ - ÅÓäÇÏ';
-        newTitle_en = 'Industrial Projects - ESNAD';
-    } else if (category === 'hospital') {
-        newTitle_ar = 'ãÔÇÑíÚ ÇáãÓÊÔİíÇÊ - ÅÓäÇÏ';
-        newTitle_en = 'Hospital Projects - ESNAD';
+function initializeProjectFiltering() {
+    const filterTabs = document.querySelectorAll('.projects-grid-section .filter-tab');
+    const projectsContainer = document.getElementById('projects-container');
+    const currentProjectCategoryTitle = document.getElementById('current-project-category-title');
+    const currentProjectCategoryDescription = document.getElementById('current-project-category-description');
+
+    const categoryTitles = {
+        'all': {
+            title: 'ÙƒÙ„ Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹',
+            description: 'Ù†ÙØªØ®Ø± Ø¨ØªÙ‚Ø¯ÙŠÙ… Ø­Ù„ÙˆÙ„ Ù‡Ù†Ø¯Ø³ÙŠØ© Ù…Ø¨ØªÙƒØ±Ø© ÙˆÙ…Ø´Ø§Ø±ÙŠØ¹ Ù†Ø§Ø¬Ø­Ø© Ø¹Ø¨Ø± Ù‚Ø·Ø§Ø¹Ø§Øª Ù…Ø®ØªÙ„ÙØ©.'
+        },
+        'industrial': {
+            title: 'Ù…Ø´Ø§Ø±ÙŠØ¹ ØµÙ†Ø§Ø¹ÙŠØ©',
+            description: 'Ø­Ù„ÙˆÙ„ HVAC Ù…ØªÙƒØ§Ù…Ù„Ø© Ù„Ù„Ù…ØµØ§Ù†Ø¹ØŒ Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹Ø§ØªØŒ ÙˆØ§Ù„Ù…Ù†Ø´Ø¢Øª Ø§Ù„ØµÙ†Ø§Ø¹ÙŠØ© Ø§Ù„ÙƒØ¨ÙŠØ±Ø©.'
+        },
+        'commercial': {
+            title: 'Ù…Ø´Ø§Ø±ÙŠØ¹ ØªØ¬Ø§Ø±ÙŠØ©',
+            description: 'Ø£Ù†Ø¸Ù…Ø© ØªÙƒÙŠÙŠÙ ÙˆØªÙ‡ÙˆÙŠØ© Ù…ØªØ·ÙˆØ±Ø© Ù„Ù„Ø£Ø¨Ø±Ø§Ø¬ Ø§Ù„Ù…ÙƒØªØ¨ÙŠØ©ØŒ Ø§Ù„Ù…Ø±Ø§ÙƒØ² Ø§Ù„ØªØ¬Ø§Ø±ÙŠØ©ØŒ ÙˆØ§Ù„ÙÙ†Ø§Ø¯Ù‚.'
+        },
+        'healthcare': {
+            title: 'Ù…Ø´Ø§Ø±ÙŠØ¹ ØµØ­ÙŠØ©',
+            description: 'ØªØ·Ø¨ÙŠÙ‚ Ø£Ø­Ø¯Ø« Ø§Ù„Ù…Ø¹Ø§ÙŠÙŠØ± ÙÙŠ Ø£Ù†Ø¸Ù…Ø© HVAC Ù„Ù„Ù…Ø³ØªØ´ÙÙŠØ§ØªØŒ Ø§Ù„Ø¹ÙŠØ§Ø¯Ø§ØªØŒ ÙˆØ§Ù„Ù…Ø®ØªØ¨Ø±Ø§Øª.'
+        }
+        // Ø£Ø¶Ù Ø§Ù„Ù…Ø²ÙŠØ¯ Ù…Ù† Ø¹Ù†Ø§ÙˆÙŠÙ† ÙØ¦Ø§Øª Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ Ù‡Ù†Ø§
+    };
+
+    // ÙˆØ¸ÙŠÙØ© Ù„ØªØ­Ø¯ÙŠØ« Ø¹Ù†ÙˆØ§Ù† ÙˆÙˆØµÙ ØµÙØ­Ø© Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹
+    function updateProjectPageTitle(category) {
+        const info = categoryTitles[category] || categoryTitles['all'];
+        if (currentProjectCategoryTitle) currentProjectCategoryTitle.textContent = info.title;
+        if (currentProjectCategoryDescription) currentProjectCategoryDescription.textContent = info.description;
     }
 
-    document.title = (currentLang === 'ar') ? newTitle_ar : newTitle_en;
-}
+    // ÙˆØ¸ÙŠÙØ© Ù„Ø¹Ø±Ø¶ Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ ÙÙŠ Ø§Ù„Ø´Ø¨ÙƒØ©
+    function displayProjects(projectsToDisplay) {
+        if (!projectsContainer) return;
+        projectsContainer.innerHTML = ''; // Ù…Ø³Ø­ Ø§Ù„Ù…Ø­ØªÙˆÙ‰ Ø§Ù„Ø­Ø§Ù„ÙŠ
 
-// æÙíİÉ ÊÕİíÉ ÇáãÔÇÑíÚ æÚÑÖåÇ
-function filterAndDisplayProjects(selectedCategory) {
-    const filterTabs = document.querySelectorAll('.projects-grid-section .filter-tab');
-    const projectsGridSection = document.querySelector('.projects-grid-section');
+        if (projectsToDisplay.length === 0) {
+            projectsContainer.innerHTML = '<p style="text-align: center; font-size: 1.2em; color: var(--light-text-color);">Ù„Ø§ ØªÙˆØ¬Ø¯ Ù…Ø´Ø§Ø±ÙŠØ¹ ÙÙŠ Ù‡Ø°Ù‡ Ø§Ù„ÙØ¦Ø© Ø­Ø§Ù„ÙŠØ§Ù‹.</p>';
+            return;
+        }
 
-    // Only run if on projects.html
-    if (projectsGridSection) {
+        projectsToDisplay.forEach(project => {
+            const projectCard = document.createElement('div');
+            projectCard.classList.add('project-card');
+            projectCard.setAttribute('data-category', project.category);
+            projectCard.setAttribute('data-project-id', project.id);
+
+            projectCard.innerHTML = `
+                <img src="${project.image}" alt="${project.name}">
+                <div class="project-info">
+                    <h4>${project.name}</h4>
+                    <p>${project.description}</p>
+                    <ul class="project-details-list">
+                        <li><i class="fas fa-industry"></i> Ø§Ù„Ù‚Ø·Ø§Ø¹: ${project.details.sector}</li>
+                        <li><i class="fas fa-calendar-alt"></i> ØªØ§Ø±ÙŠØ® Ø§Ù„Ø¥Ù†Ø¬Ø§Ø²: ${project.details.completionDate}</li>
+                        <li><i class="fas fa-location-dot"></i> Ø§Ù„Ù…ÙˆÙ‚Ø¹: ${project.details.location}</li>
+                    </ul>
+                    </div>
+            `;
+            projectsContainer.appendChild(projectCard);
+
+            // Ø¥Ø¶Ø§ÙØ© ÙƒÙ„Ø§Ø³ 'show' Ø¨Ø¹Ø¯ ÙØªØ±Ø© Ù‚ØµÙŠØ±Ø© Ù„ØªØ·Ø¨ÙŠÙ‚ Ø§Ù„ØªØ£Ø«ÙŠØ± Ø§Ù„Ø¨ØµØ±ÙŠ
+            setTimeout(() => projectCard.classList.add('show'), 50);
+        });
+    }
+
+    // ÙˆØ¸ÙŠÙØ© ØªØµÙÙŠØ© Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ ÙˆØ¹Ø±Ø¶Ù‡Ø§
+    function filterAndDisplayProjects(selectedCategory) {
         const filteredProjects = selectedCategory === 'all'
             ? projectsData
             : projectsData.filter(project => project.category === selectedCategory);
 
         displayProjects(filteredProjects);
         updateProjectPageTitle(selectedCategory);
-
-        // Update filter tabs active state
-        filterTabs.forEach(t => t.classList.remove('active'));
-        document.querySelector(`.projects-grid-section .filter-tab[data-category="${selectedCategory}"]`)?.classList.add('active');
     }
+
+    // Ù…Ø¹Ø§Ù„Ø¬Ø© Ø§Ù„Ù†Ù‚Ø± Ø¹Ù„Ù‰ Ø£Ø²Ø±Ø§Ø± Ø§Ù„ÙÙ„ØªØ±Ø© Ù„Ù„Ù…Ø´Ø§Ø±ÙŠØ¹
+    filterTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            filterTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            const category = tab.dataset.category;
+            filterAndDisplayProjects(category);
+            // ØªØ­Ø¯ÙŠØ« URL Ø¯ÙˆÙ† Ø¥Ø¹Ø§Ø¯Ø© ØªØ­Ù…ÙŠÙ„ Ø§Ù„ØµÙØ­Ø©
+            history.pushState(null, '', `projects.html?category=${category}`);
+        });
+    });
+
+    // Ù…Ø¹Ø§Ù„Ø¬Ø© ØªØ­Ù…ÙŠÙ„ ØµÙØ­Ø© Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ Ø¨Ù†Ø§Ø¡Ù‹ Ø¹Ù„Ù‰ Ù…Ø¹Ø§Ù…Ù„ URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCategory = urlParams.get('category') || 'all';
+
+    // ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø²Ø± Ø§Ù„Ù…Ù†Ø§Ø³Ø¨ ÙˆØªØµÙÙŠØ© Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ Ø¹Ù†Ø¯ Ø§Ù„ØªØ­Ù…ÙŠÙ„ Ø§Ù„Ø£ÙˆÙ„ÙŠ
+    const activeTab = document.querySelector(`.projects-grid-section .filter-tab[data-category="${initialCategory}"]`);
+    if (activeTab) {
+        activeTab.classList.add('active');
+    } else {
+        document.querySelector('.projects-grid-section .filter-tab[data-category="all"]').classList.add('active');
+    }
+    filterAndDisplayProjects(initialCategory);
 }
 
-// ãÚÇáÌÉ ÊÍãíá ÕİÍÉ ÇáãÔÇÑíÚ ÈäÇÁğ Úáì ãÚÇãá URL
-document.addEventListener('DOMContentLoaded', () => {
-    const projectsGridSection = document.querySelector('.projects-grid-section');
-    if (projectsGridSection) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const initialCategory = urlParams.get('category') || 'all';
-
-        const filterTabs = document.querySelectorAll('.projects-grid-section .filter-tab');
-        filterTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const category = tab.dataset.category;
-                filterAndDisplayProjects(category);
-                history.pushState(null, '', `projects.html?category=${category}`);
-            });
-        });
-
-        // Initial display and tab activation for projects.html
-        filterAndDisplayProjects(initialCategory);
-    }
-});
